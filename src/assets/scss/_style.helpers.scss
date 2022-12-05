@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+// Hide visually and from screen readers
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+// Hide visually and from screen readers, maintain layout
+.invisible {
+  visibility: hidden;
+}
+
+// Hide visually, available for screen readers
+.sr-only {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  white-space: nowrap;
+
+  .focusable {
+    &:active,
+    &:focus {
+      position: static;
+      margin: 0;
+      width: auto;
+      height: auto;
+      clip: auto;
+      overflow: visible;
+      white-space: inherit;
+    }
+  }
+}
+
+// Clearfix: contain floats
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+// Interrupt underlines and overlines so that they do not touch or closely approach a glyph
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+// Horizontal ruler
+.hr {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid colors.$grey;
+}

@@ -1,0 +1,17 @@
+{
+  "layouts": {
+    "title": "Dim Nuxt 3 Template"
+  },
+  "language": "Sprache",
+  "error": {
+    "title": "Etwas hat schief gelaufen",
+    "code": "Fehlercode",
+    "message": "Meldung",
+    "back": "Zurück zur Startseite"
+  },
+  "navi": {
+    "home": "Startseite",
+    "examples": "Beispiele",
+    "error": "404"
+  }
+}

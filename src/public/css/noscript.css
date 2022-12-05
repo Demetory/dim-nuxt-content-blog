@@ -1,0 +1,38 @@
+noscript,
+.noscript {
+  z-index: 999999999999;
+  position: fixed;
+  display: flex;
+  margin: 0;
+  padding: 20px;
+  min-width: 100vw;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #121212;
+  background-color: #efefef;
+}
+
+noscript img,
+.noscript img {
+  max-width: 280px;
+}
+
+noscript div,
+.noscript div {
+  font-family: "Ubuntu", sans-serif;
+}
+
+noscript div h1,
+.noscript div h1 {
+  padding: 1rem 0;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+noscript div p,
+.noscript div p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
