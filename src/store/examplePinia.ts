@@ -9,7 +9,7 @@ const useExamplePiniaStore = defineStore("examplePiniaStore", () => {
   const input = ref("Test");
   const copyright = ref([
     { id: 1, type: "homepage", text: "Demetory", url: "https://demetrey.ru/" },
-    { id: 2, type: "repo", text: "Github", url: "https://github.com/Demetory/dim-nuxt3-template" },
+    { id: 2, type: "repo", text: "Github", url: "https://github.com/Demetory/dim-nuxt-content-blog" },
   ]);
 
   // Methods

@@ -1,14 +1,15 @@
 # Din Nuxt 3 + Nuxt-Content 2 Starter
 
-- [Nuxt 3](https://nuxt.com/) Minimalistic Starter Template
+- [Nuxt 3](https://nuxt.com/) + [Nuxt-Content 2](https://content.nuxtjs.org/) Starter Blog Template
 - Uses [TypeScript](https://www.typescriptlang.org/) and [Script Setup SFC](https://vuejs.org/api/sfc-script-setup.html)
+- Designed with [Atomic Pattern](https://vuefront.com/develop/)
+- Based on [Dim-Nuxt3-Template](https://github.com/Demetory/dim-nuxt3-template)
 
 ## Features
 
 - Full configured and ready
 - No complex || heavy dependencies
-- Atomic Design Patter
-- Pre-configured HTML index page (including SEO-metatags and No-Script section)
+- Atomic Design Pattern
 - Prepared public folder (icons, robots.txt, htaccess, humans.txt, etc)
 - CSS normalization
 - SCSS Maps and Modules in global scope
@@ -21,7 +22,7 @@
 
 ## Preview
 
-[Live Demo](http://nuxt3-template.demetrey.ru/)
+[Live Demo](http://nuxt-content-template.demetrey.ru/)
 <br/><br/>
 ![image](/src/public/cover.jpg)
 <br/><br/>
@@ -34,7 +35,7 @@
 
 ## Recommended IDE
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) + [Vue Dev Tools](https://github.com/vuejs/devtools)
   <br/><br/>
 
 ## Installed Modules
