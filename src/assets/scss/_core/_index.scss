@@ -1,6 +1,9 @@
 /* ==========================================================================
-   Global Scope
+   STYLES: Default definitions to global scope
+
+   Edit carefully.
    ========================================================================== */
 
-@import "./core";
-@import "./theme";
+@import "style.defaults";
+@import "style.helpers";
+@import "style.print";

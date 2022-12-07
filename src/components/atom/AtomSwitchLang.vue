@@ -28,6 +28,7 @@
     border: grid.$border-solid colors.$link-main;
     border-radius: grid.$border-radius;
     transition: border-color grid.$transition;
+    cursor: pointer;
     outline: 0;
 
     &:hover,

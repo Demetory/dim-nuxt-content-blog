@@ -11,7 +11,8 @@
   },
   "navi": {
     "home": "Home",
-    "examples": "Examples",
+    "example": "Example | Examples",
+    "blog": "Blog",
     "error": "404"
   }
 }

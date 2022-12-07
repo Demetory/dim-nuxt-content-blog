@@ -4,7 +4,7 @@
 Frontend: Demetrey <hello@demetrey.ru>
 
 /* SITE */
-Last update: 2022/12/02
+Last update: 2022/12/07
 Standards: HTML5, CSS3/SCSS, TypeScript, Script Setup SFC
-Components: Vite, Nuxt3, Pinia, ESlint, Prettier, I18n, VueUse
+Components: Vite, Nuxt3, Nuxt-Content 2, Pinia, ESlint, Prettier, I18n, VueUse
 Software: VSCode

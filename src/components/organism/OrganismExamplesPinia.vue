@@ -15,9 +15,9 @@ const examplePiniaStore = useExamplePiniaStore();
     <template #content>
       <p>Count: {{ examplePiniaStore.count }} | Input: {{ examplePiniaStore.input }}</p>
       <p>
-        <button class="btn" @click.stop="examplePiniaStore.increment()">Increment</button>
-        <button class="btn" @click.stop="examplePiniaStore.decrement()">Decrement</button>
-        <input v-model="examplePiniaStore.input" class="input" type="text" />
+        <AtomButton @click.stop="examplePiniaStore.increment()">Increment</AtomButton>
+        <AtomButton @click.stop="examplePiniaStore.decrement()">Decrement</AtomButton>
+        <AtomInput v-model="examplePiniaStore.input" />
       </p>
       <p>
         Pinia

@@ -9,7 +9,7 @@ const dateTZ: Date = useDateTZ(date, "Asia/Jakarta");
 
 // Computed Properties
 const getYear = computed(() => {
-  return dateTZ.getFullYear();
+  return new String(useDateToRoman(dateTZ.getFullYear()));
 });
 
 const getCopyright = computed(() => {

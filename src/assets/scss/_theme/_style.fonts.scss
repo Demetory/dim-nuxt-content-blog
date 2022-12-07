@@ -1,5 +1,7 @@
 /* ==========================================================================
-   Imported WebFonts
+   MIXIN: Imported WebFonts
+
+   Global fonts import from /assets/fonts folder.
    ========================================================================== */
 
 @mixin font($name, $style, $weight, $url) {

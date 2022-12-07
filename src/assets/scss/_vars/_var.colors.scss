@@ -1,7 +1,7 @@
 /* ==========================================================================
-   Color Library
+   VARIABLES: Color Library
 
-   Imported through nuxt.config.ts as @use directive
+   Imported through vite.config.ts as @use directive
    Usage: colors.$var
    ========================================================================== */
 
@@ -10,8 +10,11 @@ $white: #fff;
 $black: #000;
 $grey: #999;
 
-// Fonts
-$font-black: #222;
+// Typo Colors
+$font-main: #121212;
+$font-black: #121212;
+$font-selection: #fff;
+$font-grey: #dbdbdb;
 
 // Links
 $link-main: #00bd6f;
@@ -19,7 +22,9 @@ $link-main-hover: #3f3f46;
 $link-main-active: #000;
 
 // Backgrounds
-$bg-white: #efefef;
+$bg-body: #fff;
+$bg-border-app: #efefef;
+$bg-selection: #73bbc5;
 
 // Helpers
 $selection-bg: #b3d4fc;

@@ -1,0 +1,104 @@
+/* ==========================================================================
+   STYLES: Theme
+
+   Main App Theme.
+   Feel free to customize your app ^-^
+   ========================================================================== */
+
+// Core
+body {
+  font-family: "Ubuntu", sans-serif;
+  overflow-y: scroll;
+}
+
+// App Border
+html,
+body {
+  &::before,
+  &::after {
+    content: "";
+    backface-visibility: hidden;
+    position: fixed;
+    background-color: colors.$bg-border-app;
+    z-index: grid.$zindex-border-app;
+  }
+}
+
+html {
+  &:after,
+  &:before {
+    top: 0;
+    height: 100%;
+    width: grid.$border-app;
+
+    @media screen and (max-width: 800px) {
+      width: calc(grid.$border-app / 2);
+    }
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+body {
+  padding: grid.$border-app;
+
+  &::after,
+  &::before {
+    left: 0;
+    width: 100%;
+    height: grid.$border-app;
+
+    @media screen and (max-width: 800px) {
+      height: calc(grid.$border-app / 2);
+    }
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: calc(grid.$border-app / 2);
+  }
+}
+
+// Containers
+.page-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding: grid.$gap;
+}
+
+// Typo
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
