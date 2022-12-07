@@ -1,0 +1,82 @@
+/* ==========================================================================
+   STYLES: Default definitions
+
+   Common default definitions.
+   Edit carefully.
+   ========================================================================== */
+
+// Core
+html {
+  display: flex;
+  flex: 1;
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-width: grid.$min-width;
+  min-height: grid.$min-height;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: colors.$font-main;
+  background-color: colors.$bg-body;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#__nuxt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100%;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+// Links
+a {
+  color: colors.$link-main;
+  transition: color grid.$transition;
+  text-decoration: none;
+
+  &:hover {
+    color: colors.$link-main-hover;
+  }
+
+  &:active,
+  &.router-link-exact-active {
+    color: colors.$link-main-active;
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
+// Selection Highlight
+::selection {
+  background-color: colors.$bg-selection;
+  color: colors.$font-selection;
+  text-shadow: none;
+}
+
+// Fade + Blur Transition
+.page-enter-active,
+.page-leave-active {
+  transition: all grid.$transition;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}

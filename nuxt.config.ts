@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 
   css: ["@/assets/scss/index.scss"],
 
-  modules: ["@vueuse/nuxt", "@pinia/nuxt"],
+  modules: ["@nuxt/content", "@vueuse/nuxt", "@pinia/nuxt"],
 
   vite: {
     logLevel: "info",
@@ -26,8 +26,9 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-            @use "@/assets/scss/var.colors.scss" as colors;
-            @use '@/assets/scss/var.grid.scss' as grid;
+          @use "./src/assets/scss/_vars/var.colors.scss" as colors;
+          @use "./src/assets/scss/_vars/var.grid.scss" as grid;
+          @import "./src/assets/scss/_vars/var.mixins.scss";
          `,
         },
       },

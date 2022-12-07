@@ -1,4 +1,4 @@
-# Nuxt 3 Starter
+# Din Nuxt 3 + Nuxt-Content 2 Starter
 
 - [Nuxt 3](https://nuxt.com/) Minimalistic Starter Template
 - Uses [TypeScript](https://www.typescriptlang.org/) and [Script Setup SFC](https://vuejs.org/api/sfc-script-setup.html)

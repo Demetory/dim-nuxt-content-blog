@@ -1,7 +1,7 @@
 /* ==========================================================================
-   Grid System / Sections / Containers
+   VARIABLES: Grid System / Dimensions
 
-   Imported through nuxt.config.ts as @use directive
+   Imported through vite.config.ts as @use directive
    Usage: grid.$var
    ========================================================================== */
 
@@ -13,6 +13,13 @@ $gap: 1.6rem;
 // Borders
 $border-radius: 8px;
 $border-solid: solid 1px;
+$border-app: 20px;
+
+// Z-Indexes
+$zindex-top: 90000;
+$zindex-kreuz: 21000;
+$zindex-border-app: 20000;
+$zindex-navi: 10000;
 
 // Transitions
 $transition: 0.5s ease;

@@ -2,7 +2,8 @@
 // Data
 const data = [
   { path: "/", translate: "home" },
-  { path: "/examples", translate: "examples" },
+  { path: "/examples", translate: "example" },
+  { path: "/blog", translate: "blog" },
 ];
 </script>
 
@@ -10,7 +11,7 @@ const data = [
   <nav>
     <p>
       <NuxtLink v-for="(link, index) in data" :key="`navi-${index}`" :to="link.path">
-        {{ $t(`navi.${link.translate}`) }}
+        {{ $t(`navi.${link.translate}`, 2) }}
       </NuxtLink>
     </p>
   </nav>
