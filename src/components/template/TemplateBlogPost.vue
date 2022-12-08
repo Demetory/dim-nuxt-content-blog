@@ -23,7 +23,7 @@ defineProps({
     <article class="post__body">
       <div class="post__cover">
         <NuxtLink :to="article._path">
-          <img :alt="`Dim Nuxt-Content Template | ${article.title}`" :src="`/${article.img}`" />
+          <img :alt="`Dim NuxtContent Template | ${article.title}`" :src="`/${article.img}`" />
         </NuxtLink>
       </div>
       <div v-if="type === 'page'" class="post__content">

@@ -1,33 +1,30 @@
 <script setup lang="ts">
 // Modules
 import { useI18n } from "vue-i18n";
+import { useExamplePiniaStore } from "@/store/examplePinia";
 
 // Data
-const route = useRoute();
-const { t } = useI18n();
-const siteTitle = "Dim Nuxt 3 Template";
+const { locale } = useI18n();
+const examplePiniaStore = useExamplePiniaStore();
 
 // Computed Properties
-const title = computed(() => {
-  const translate = route.meta.title ? t(`${route.meta.title}`) : null;
-  const result = translate ? `${siteTitle} | ${translate}` : siteTitle;
-  return result;
+const colorMode = computed(() => {
+  if (typeof examplePiniaStore.colorMode === "string") {
+    let result = examplePiniaStore.colorMode.toLocaleLowerCase();
+    return `mode-${result}`;
+  }
 });
 </script>
 
 <template>
-  <Html :lang="$i18n.locale">
-    <Head>
-      <Title>{{ title }}</Title>
-    </Head>
-
+  <Html :lang="locale" :class="colorMode">
     <Body>
       <NoScript>
         <section class="noscript">
           <img src="/images/fatality.svg" />
           <div>
             <h1>Easy, Tiger</h1>
-            <p>Turn JavaScript on, don`t be so paraniod.</p>
+            <p>Turn JavaScript on, dont be so paraniod.</p>
           </div>
         </section>
       </NoScript>

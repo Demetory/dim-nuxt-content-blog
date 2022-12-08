@@ -7,7 +7,7 @@ const examplePiniaStore = useExamplePiniaStore();
 
 // Methods
 const getLinkUrl = (value: string) => {
-  return examplePiniaStore.getCopyrightUrl("type", value);
+  return examplePiniaStore.getCopyrightUrl(value);
 };
 </script>
 

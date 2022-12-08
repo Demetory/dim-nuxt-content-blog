@@ -8,7 +8,7 @@ const {
 const filter = ref(tags?.split(","));
 
 // Hooks
-useHead({
+definePageMeta({
   title: "navi.blog",
 });
 </script>

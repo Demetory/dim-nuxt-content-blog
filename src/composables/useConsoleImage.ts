@@ -1,4 +1,4 @@
-// Node.js
+// Core
 import { Buffer } from "buffer";
 
 // Converts Image to Binary

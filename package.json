@@ -19,7 +19,9 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.31.0",
     "@intlify/unplugin-vue-i18n": "^0.8.0",
+    "@intlify/vite-plugin-vue-i18n": "^6.0.3",
     "@nuxt/content": "^2.2.2",
+    "@nuxtjs/i18n": "^8.0.0-beta.6",
     "@vueuse/core": "^9.5.0",
     "@vueuse/nuxt": "^9.5.0",
     "cypress": "^11.2.0",
@@ -35,6 +37,8 @@
     "vue-i18n": "^9.2.2"
   },
   "dependencies": {
+    "@intlify/vue-i18n-bridge": "^0.8.0",
+    "@intlify/vue-router-bridge": "^0.8.0",
     "@pinia/nuxt": "^0.4.4",
     "@rushstack/eslint-patch": "^1.2.0",
     "mdast-util-to-string": "^3.1.0",

@@ -10,6 +10,16 @@ html {
   display: flex;
   flex: 1;
   font-size: 62.5%;
+
+  &.mode-dark body {
+    color: colors.$font-main-dark;
+    background-color: colors.$bg-body-dark;
+  }
+
+  &.mode-light body {
+    color: colors.$font-main-light;
+    background-color: colors.$bg-body-light;
+  }
 }
 
 body {
@@ -21,12 +31,11 @@ body {
   font-style: normal;
   font-size: 1.6rem;
   line-height: 1;
-  color: colors.$font-main;
-  background-color: colors.$bg-body;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: all grid.$transition;
 }
 
 #__nuxt {

@@ -3,7 +3,7 @@
     <template #icon>
       <AtomIconDocumentation />
     </template>
-    <template #heading> Nuxt 3 + Nuxt-Content 2 Starter Template </template>
+    <template #heading> Nuxt 3 + NuxtContent 2 Starter Template </template>
     <template #content>
       <p>
         This project is served and bundled with

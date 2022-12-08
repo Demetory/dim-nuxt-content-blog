@@ -10,9 +10,6 @@ defineProps({
   },
 });
 
-// Data
-const siteTitle = "Dim Nuxt 3 Template";
-
 // Methods
 InitApp();
 
@@ -21,10 +18,6 @@ const handleError = () => clearError({ redirect: "/" });
 
 <template>
   <Html :lang="$i18n.locale">
-    <Head>
-      <Title>{{ siteTitle }}</Title>
-    </Head>
-
     <Body>
       <NoScript>
         <section class="noscript">
@@ -52,6 +45,12 @@ const handleError = () => clearError({ redirect: "/" });
 
 <style scoped lang="scss">
 .page-error {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  padding: grid.$gap;
+
   p {
     margin: 1rem 0;
   }

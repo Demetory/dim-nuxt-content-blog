@@ -3,9 +3,12 @@
     <div class="wrapper">
       <section class="head-logo">
         <AtomCube />
-        <h1 class="heading">Dim Nuxt&nbsp;3 + Nuxt-Content&nbsp;2 Template</h1>
+        <h1 class="heading">Dim Nuxt&nbsp;3 + NuxtContent&nbsp;2 Template</h1>
         <AtomNavi />
-        <AtomSwitchLang />
+        <div class="selectors">
+          <AtomSwitchLang />
+          <AtomSwitchMode />
+        </div>
       </section>
 
       <OrganismCopyright />
@@ -38,6 +41,11 @@ header {
   .heading {
     margin: 1rem 0;
     text-align: center;
+  }
+
+  .selectors {
+    display: flex;
+    flex-direction: row;
   }
 }
 </style>
