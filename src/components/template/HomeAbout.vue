@@ -1,5 +1,5 @@
 <template>
-  <TemplateSlot>
+  <AtomSlot>
     <template #icon>
       <IconDocumentation class="icon" />
     </template>
@@ -22,5 +22,5 @@
         provides you with all information you need to get started.
       </p>
     </template>
-  </TemplateSlot>
+  </AtomSlot>
 </template>

@@ -30,7 +30,7 @@ const colorMode = computed(() => {
       </NoScript>
 
       <div class="page-container">
-        <TemplateHeader />
+        <TemplateSiteHeader />
         <main>
           <slot />
         </main>

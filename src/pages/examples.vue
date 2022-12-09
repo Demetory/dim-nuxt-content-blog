@@ -7,7 +7,7 @@ definePageMeta({
 
 <template>
   <article>
-    <OrganismExamplesVueUse />
-    <OrganismExamplesPinia />
+    <TemplateExamplesVueUse />
+    <TemplateExamplesPinia />
   </article>
 </template>

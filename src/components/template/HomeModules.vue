@@ -1,5 +1,5 @@
 <template>
-  <TemplateSlot>
+  <AtomSlot>
     <template #icon>
       <IconModule class="icon" />
     </template>
@@ -30,5 +30,5 @@
         </li>
       </ul>
     </template>
-  </TemplateSlot>
+  </AtomSlot>
 </template>

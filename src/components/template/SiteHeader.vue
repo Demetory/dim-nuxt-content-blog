@@ -10,7 +10,7 @@
           <OrganismSwitchColor />
         </div>
       </section>
-      <OrganismCopyright />
+      <MoleculeCopyright />
     </div>
   </header>
 </template>

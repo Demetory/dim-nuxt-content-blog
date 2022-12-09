@@ -11,7 +11,7 @@ defineProps({
 <template>
   <article class="blog">
     <header class="blog__tags">
-      <p><b>Select by Tag:</b> <OrganismTags /></p>
+      <p><b>Select by Tag:</b> <OrganismBlogTags /></p>
     </header>
 
     <main class="blog__body">

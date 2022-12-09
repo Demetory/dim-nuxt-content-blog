@@ -7,13 +7,14 @@ import { useExamplePiniaStore } from "@/store/examplePinia";
 const examplePiniaStore = useExamplePiniaStore();
 const { x, y } = useMouse();
 
+// Computed Properties
 const colorMode = computed(() => {
   return examplePiniaStore.colorMode;
 });
 </script>
 
 <template>
-  <TemplateSlot>
+  <AtomSlot>
     <template #icon>
       <IconModule class="icon" />
     </template>
@@ -27,5 +28,5 @@ const colorMode = computed(() => {
       </p>
       <p>VueUse <a href="https://vueuse.org/guide/" target="_blank" rel="noopener">official documentation</a></p>
     </template>
-  </TemplateSlot>
+  </AtomSlot>
 </template>

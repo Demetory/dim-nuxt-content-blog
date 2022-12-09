@@ -5,8 +5,8 @@
   "language": "Sprache",
   "theme": "Mode",
   "modes": {
-    "dark": "Licht",
-    "light": "Dunkel"
+    "dark": "Dunkel",
+    "light": "Licht"
   },
   "error": {
     "title": "Etwas hat schief gelaufen",

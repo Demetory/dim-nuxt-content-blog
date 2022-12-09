@@ -12,7 +12,7 @@ const getLinkUrl = (value: string) => {
 </script>
 
 <template>
-  <TemplateSlot>
+  <AtomSlot>
     <template #icon>
       <IconSupport class="icon" />
     </template>
@@ -25,5 +25,5 @@ const getLinkUrl = (value: string) => {
         <a :href="getLinkUrl('repo')" target="_blank" rel="noopener">template repo</a>
       </p>
     </template>
-  </TemplateSlot>
+  </AtomSlot>
 </template>
