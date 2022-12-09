@@ -22,7 +22,7 @@ const getCopyright = computed(() => {
     {{ getYear }} &copy;
 
     <template v-for="(item, index) in getCopyright" :key="`link-${index}`">
-      <AtomLink :link="item" />
+      <AtomLink :params="item" />
       <span v-if="index !== Object.keys(getCopyright).length - 1"> | </span>
     </template>
   </p>

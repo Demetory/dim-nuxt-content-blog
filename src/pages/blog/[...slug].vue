@@ -40,6 +40,6 @@ function removeSlash(path) {
 <template>
   <section class="blog-page">
     <TemplateBlogPost :article="getArticle" type="page" />
-    <AtomPostSurround :prev="getSurround('prev')" :next="getSurround('next')" />
+    <MoleculePostSurround :prev="getSurround('prev')" :next="getSurround('next')" />
   </section>
 </template>

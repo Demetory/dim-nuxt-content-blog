@@ -1,7 +1,7 @@
 <template>
   <TemplateSlot>
     <template #icon>
-      <AtomIconTooling />
+      <IconTooling class="icon" />
     </template>
     <template #heading> Tooling </template>
     <template #content>

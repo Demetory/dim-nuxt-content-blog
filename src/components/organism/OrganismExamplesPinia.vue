@@ -9,7 +9,7 @@ const examplePiniaStore = useExamplePiniaStore();
 <template>
   <TemplateSlot>
     <template #icon>
-      <AtomIconModule />
+      <IconModule class="icon" />
     </template>
     <template #heading> Pinia Example </template>
     <template #content>

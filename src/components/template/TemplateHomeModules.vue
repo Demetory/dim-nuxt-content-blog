@@ -1,7 +1,7 @@
 <template>
   <TemplateSlot>
     <template #icon>
-      <AtomIconModule />
+      <IconModule class="icon" />
     </template>
     <template #heading> Installed Modules </template>
     <template #content>

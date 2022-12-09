@@ -15,7 +15,7 @@ const colorMode = computed(() => {
 <template>
   <TemplateSlot>
     <template #icon>
-      <AtomIconModule />
+      <IconModule class="icon" />
     </template>
     <template #heading> UseUse Example </template>
     <template #content>

@@ -9,11 +9,9 @@ const data = [
 
 <template>
   <nav>
-    <p>
-      <NuxtLink v-for="(link, index) in data" :key="`navi-${index}`" :to="link.path">
-        {{ $t(`navi.${link.translate}`) }}
-      </NuxtLink>
-    </p>
+    <NuxtLink v-for="(link, index) in data" :key="`navi-${index}`" :to="link.path">
+      {{ $t(`navi.${link.translate}`) }}
+    </NuxtLink>
   </nav>
 </template>
 

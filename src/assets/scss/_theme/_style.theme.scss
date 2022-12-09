@@ -92,6 +92,44 @@ article {
   padding: grid.$gap;
 }
 
+// Links
+a {
+  color: colors.$link-main;
+}
+
+.mode-dark a {
+  &:hover,
+  &:focus {
+    color: colors.$input-bg-dark-hover;
+  }
+
+  &:active,
+  &.router-link-exact-active {
+    color: colors.$font-white;
+  }
+}
+
+.mode-light a {
+  &:hover,
+  &:focus {
+    color: colors.$font-black;
+  }
+
+  &:active,
+  &.router-link-exact-active {
+    color: colors.$font-black;
+  }
+}
+
+// Icons
+.mode-dark .icon {
+  color: colors.$font-main-dark;
+}
+
+.mode-light .icon {
+  color: colors.$font-main-light;
+}
+
 // Typo
 h1 {
   font-weight: 700;

@@ -14,7 +14,7 @@ const getLinkUrl = (value: string) => {
 <template>
   <TemplateSlot>
     <template #icon>
-      <AtomIconSupport />
+      <IconSupport class="icon" />
     </template>
     <template #heading> Support </template>
     <template #content>

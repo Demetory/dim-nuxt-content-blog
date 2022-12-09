@@ -4,10 +4,10 @@
       <section class="head-logo">
         <AtomCube />
         <h1 class="heading">Dim Nuxt&nbsp;3 + NuxtContent&nbsp;2 Template</h1>
-        <AtomNavi />
+        <MoleculeNavi />
         <div class="selectors">
-          <AtomSwitchLang />
-          <AtomSwitchMode />
+          <OrganismSwitchLang />
+          <OrganismSwitchColor />
         </div>
       </section>
 
@@ -46,6 +46,10 @@ header {
   .selectors {
     display: flex;
     flex-direction: row;
+
+    .select:first-child {
+      margin-right: 2rem;
+    }
   }
 }
 </style>

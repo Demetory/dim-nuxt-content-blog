@@ -1,7 +1,7 @@
 <template>
   <TemplateSlot>
     <template #icon>
-      <AtomIconDocumentation />
+      <IconDocumentation class="icon" />
     </template>
     <template #heading> Nuxt 3 + NuxtContent 2 Starter Template </template>
     <template #content>
