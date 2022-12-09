@@ -6,24 +6,24 @@ import { useExamplePiniaStore } from "@/store/examplePinia";
 const examplePiniaStore = useExamplePiniaStore();
 const date: Date = new Date();
 const dateTZ: Date = useDateTZ(date, "Asia/Jakarta");
+const copyright = examplePiniaStore.copyright;
 
 // Computed Properties
 const getYear = computed(() => {
   return new String(useDateToRoman(dateTZ.getFullYear()));
 });
 
-const getCopyright = computed(() => {
-  return examplePiniaStore.copyright;
+const isLast = computed(() => (index: number, data: Object) => {
+  return index !== Object.keys(data).length - 1;
 });
 </script>
 
 <template>
   <p class="copyright">
     {{ getYear }} &copy;
-
-    <template v-for="(item, index) in getCopyright" :key="`link-${index}`">
+    <template v-for="(item, index) in copyright" :key="`link-${index}`">
       <AtomLink :params="item" />
-      <span v-if="index !== Object.keys(getCopyright).length - 1"> | </span>
+      <span v-if="isLast(index, copyright)"> | </span>
     </template>
   </p>
 </template>
