@@ -4,7 +4,7 @@ import type ILink from "@/types/ILink";
 
 // Props
 defineProps({
-  link: {
+  params: {
     type: Object as () => ILink,
     required: true,
   },
@@ -12,5 +12,5 @@ defineProps({
 </script>
 
 <template>
-  <a :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.text }}</a>
+  <a :href="params.url" target="_blank" rel="noopener noreferrer">{{ params.text }}</a>
 </template>

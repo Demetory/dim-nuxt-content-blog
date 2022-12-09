@@ -10,6 +10,16 @@ html {
   display: flex;
   flex: 1;
   font-size: 62.5%;
+
+  &.mode-dark body {
+    color: colors.$font-main-dark;
+    background-color: colors.$bg-body-dark;
+  }
+
+  &.mode-light body {
+    color: colors.$font-main-light;
+    background-color: colors.$bg-body-light;
+  }
 }
 
 body {
@@ -21,12 +31,11 @@ body {
   font-style: normal;
   font-size: 1.6rem;
   line-height: 1;
-  color: colors.$font-main;
-  background-color: colors.$bg-body;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: all grid.$transition;
 }
 
 #__nuxt {
@@ -46,20 +55,28 @@ main {
 
 // Links
 a {
-  color: colors.$link-main;
-  transition: color grid.$transition;
+  transition: color grid.$transition, opacity grid.$transition;
   text-decoration: none;
-
-  &:hover {
-    color: colors.$link-main-hover;
-  }
+  outline: 0;
 
   &:active,
-  &.router-link-exact-active {
-    color: colors.$link-main-active;
+  &.router-link-exact-active,
+  &:disabled {
     cursor: default;
-    text-decoration: none;
   }
+}
+
+// Forms
+button,
+input,
+select {
+  outline: 0;
+}
+
+button:not(:disabled),
+input:not(:disabled),
+select:not(:disabled) {
+  cursor: pointer;
 }
 
 // Selection Highlight

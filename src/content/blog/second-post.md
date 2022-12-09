@@ -1,13 +1,13 @@
 ---
-title: "First Post"
-description: "This is the first article"
-img: "images/cover-(1).png"
-tags: [Nuxt, Test, First]
+title: "Second Post"
+description: "This is the second article"
+img: "images/cover-(2).png"
+tags: [Nuxt, Test, Second]
 ---
 
-## First blog post
+## Second blog post
 
-The first blog post using [Nuxt 3 + Nuxt-Content 2](https://content.nuxtjs.org/)
+The second blog post using [Nuxt 3 + NuxtContent 2](https://content.nuxtjs.org/)
 
 This template based on [Dim-Nuxt3-Template](https://github.com/Demetory/dim-nuxt3-template), which is served and bundled with [Vite](https://vitejs.dev/), uses [TypeScript](https://www.typescriptlang.org/) and [Script Setup SFC](https://vuejs.org/api/sfc-script-setup.html).
 

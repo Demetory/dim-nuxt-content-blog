@@ -1,7 +1,7 @@
 {
-  "name": "Dim-Nuxt-Content-Template",
-  "short_name": "Dim-Nuxt-Content",
-  "description": "Dim Nuxt 3 + Nuxt-Content 2 Starter Template",
+  "name": "Dim-NuxtContent-Template",
+  "short_name": "Dim-NuxtContent",
+  "description": "Dim Nuxt 3 + NuxtContent 2 Starter Template",
   "icons": [
     {
       "src": "icon.png",

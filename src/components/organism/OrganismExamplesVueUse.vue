@@ -1,24 +1,30 @@
 <script setup lang="ts">
 // Modules
-import { useLocalStorage, useMouse } from "@vueuse/core";
+import { useMouse } from "@vueuse/core";
+import { useExamplePiniaStore } from "@/store/examplePinia";
 
 // Data
+const examplePiniaStore = useExamplePiniaStore();
 const { x, y } = useMouse();
-const localStore = useLocalStorage("my-storage", {
-  name: "Apple",
-  color: "red",
+
+const colorMode = computed(() => {
+  return examplePiniaStore.colorMode;
 });
 </script>
 
 <template>
   <TemplateSlot>
     <template #icon>
-      <AtomIconModule />
+      <IconModule class="icon" />
     </template>
     <template #heading> UseUse Example </template>
     <template #content>
-      <p>Mouse Position: {{ x }} + {{ y }}</p>
-      <p>Local Store: {{ localStore }}</p>
+      <p>
+        Mouse Position: <client-only>{{ x }} + {{ y }}</client-only>
+      </p>
+      <p>
+        Local Store: <client-only>{{ colorMode }}</client-only>
+      </p>
       <p>VueUse <a href="https://vueuse.org/guide/" target="_blank" rel="noopener">official documentation</a></p>
     </template>
   </TemplateSlot>

@@ -1,43 +1,55 @@
 <template>
-  <header>
-    <div class="wrapper">
-      <section class="head-logo">
+  <header class="header">
+    <div class="header__wrap">
+      <section class="header__logo">
         <AtomCube />
-        <h1 class="heading">Dim Nuxt&nbsp;3 + Nuxt-Content&nbsp;2 Template</h1>
-        <AtomNavi />
-        <AtomSwitchLang />
+        <h1 class="header__title">Dim Nuxt&nbsp;3 + NuxtContent&nbsp;2 Template</h1>
+        <MoleculeNavi />
+        <div class="header__switchers">
+          <OrganismSwitchLang />
+          <OrganismSwitchColor />
+        </div>
       </section>
-
       <OrganismCopyright />
     </div>
   </header>
 </template>
 
 <style scoped lang="scss">
-header {
+.header {
   position: relative;
   display: flex;
   flex-direction: column;
   flex: 0 1 33%;
   padding: grid.$gap;
 
-  .wrapper {
+  &__wrap {
     position: sticky;
     top: calc(50vh - 295px / 2);
     display: flex;
     flex-direction: column;
   }
 
-  .head-logo {
+  &__logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 1;
   }
-  .heading {
+
+  &__title {
     margin: 1rem 0;
     text-align: center;
+  }
+
+  &__switchers {
+    display: flex;
+    flex-direction: row;
+
+    .select:first-child {
+      margin-right: 2rem;
+    }
   }
 }
 </style>

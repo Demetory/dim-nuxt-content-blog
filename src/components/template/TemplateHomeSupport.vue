@@ -7,14 +7,14 @@ const examplePiniaStore = useExamplePiniaStore();
 
 // Methods
 const getLinkUrl = (value: string) => {
-  return examplePiniaStore.getCopyrightUrl("type", value);
+  return examplePiniaStore.getCopyrightUrl(value);
 };
 </script>
 
 <template>
   <TemplateSlot>
     <template #icon>
-      <AtomIconSupport />
+      <IconSupport class="icon" />
     </template>
     <template #heading> Support </template>
     <template #content>

@@ -1,6 +1,6 @@
-# Din Nuxt 3 + Nuxt-Content 2 Starter
+# Din Nuxt 3 + NuxtContent 2 Starter
 
-- [Nuxt 3](https://nuxt.com/) + [Nuxt-Content 2](https://content.nuxtjs.org/) Starter Blog Template
+- [Nuxt 3](https://nuxt.com/) + [NuxtContent 2](https://content.nuxtjs.org/) Starter Blog Template
 - Uses [TypeScript](https://www.typescriptlang.org/) and [Script Setup SFC](https://vuejs.org/api/sfc-script-setup.html)
 - Designed with [Atomic Pattern](https://vuefront.com/develop/)
 - Based on [Dim-Nuxt3-Template](https://github.com/Demetory/dim-nuxt3-template)

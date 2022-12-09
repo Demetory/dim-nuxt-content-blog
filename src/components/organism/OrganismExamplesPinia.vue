@@ -9,15 +9,19 @@ const examplePiniaStore = useExamplePiniaStore();
 <template>
   <TemplateSlot>
     <template #icon>
-      <AtomIconModule />
+      <IconModule class="icon" />
     </template>
     <template #heading> Pinia Example </template>
     <template #content>
-      <p>Count: {{ examplePiniaStore.count }} | Input: {{ examplePiniaStore.input }}</p>
+      <p>
+        Count: <client-only>{{ examplePiniaStore.examples.counter }}</client-only> | Input:
+        <client-only>{{ examplePiniaStore.examples.textfield }}</client-only> | Mode:
+        <client-only>{{ examplePiniaStore.colorMode }}</client-only>
+      </p>
       <p>
         <AtomButton @click.stop="examplePiniaStore.increment()">Increment</AtomButton>
         <AtomButton @click.stop="examplePiniaStore.decrement()">Decrement</AtomButton>
-        <AtomInput v-model="examplePiniaStore.input" />
+        <AtomInput v-model="examplePiniaStore.examples.textfield" />
       </p>
       <p>
         Pinia

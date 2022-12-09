@@ -1,15 +1,18 @@
-<script setup>
+<script setup lang="ts">
 // Props
-defineProps({
-  tag: {
-    type: String,
-    required: true,
-  },
+const props = defineProps<{
+  tag: string;
+  type?: string;
+}>();
+
+// Computed Properties
+const getType = computed(() => {
+  return props.type ? `tag-${props.type}` : null;
 });
 </script>
 
 <template>
-  <span class="tag">
+  <span :class="['tag', getType]">
     <NuxtLink :to="`/blog/tags/${tag}`"> {{ tag }} </NuxtLink>
   </span>
 </template>

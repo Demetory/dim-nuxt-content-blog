@@ -1,6 +1,18 @@
-<script setup>
+<script setup lang="ts">
+// Types
+import type ISurroundLink from "@/types/ISurroundLink";
+
 // Props
-defineProps(["prev", "next"]);
+defineProps({
+  prev: {
+    type: Object as () => ISurroundLink,
+    required: false,
+  },
+  next: {
+    type: Object as () => ISurroundLink,
+    required: false,
+  },
+});
 </script>
 
 <template>

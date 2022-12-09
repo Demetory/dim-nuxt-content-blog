@@ -1,7 +1,21 @@
+// Modules
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
+
 // Runs by application start
 const InitApp = () => {
-  // Setting base css in index.html
+  const route = useRoute();
+  const { t } = useI18n();
+  const siteTitle = "Dim Nuxt 3 Template";
+
+  const title = computed(() => {
+    const translate = route.meta.title ? t(`${route.meta.title}`) : null;
+    const result = translate ? `${siteTitle} | ${translate}` : siteTitle;
+    return result;
+  });
+
   useHead({
+    title: title,
     link: [
       {
         rel: "stylesheet",
@@ -11,10 +25,17 @@ const InitApp = () => {
         rel: "stylesheet",
         href: "/css/noscript.css",
       },
+      {
+        rel: "author",
+        href: "/humans.txt",
+      },
+      {
+        rel: "manifest",
+        href: "/site.webmanifest",
+      },
     ],
   });
 
-  // Shows welcome logo in console
   useConsoleImage(exampleLogo);
 };
 

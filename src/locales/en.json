@@ -3,6 +3,11 @@
     "title": "Dim Nuxt 3 Template"
   },
   "language": "Language",
+  "theme": "Mode",
+  "modes": {
+    "dark": "Dark",
+    "light": "Light"
+  },
   "error": {
     "title": "Something goes wrong",
     "code": "Error code",
@@ -11,7 +16,7 @@
   },
   "navi": {
     "home": "Home",
-    "example": "Example | Examples",
+    "example": "Examples",
     "blog": "Blog",
     "error": "404"
   }
