@@ -1,4 +1,7 @@
 <script setup lang="ts">
+// Modules
+import { useI18n } from "vue-i18n";
+
 // Types
 import type ISelect from "@/types/ISelect";
 
@@ -12,11 +15,21 @@ const props = defineProps({
 
 // Data
 const emit = defineEmits(["update:modelValue"]);
+const { t } = useI18n();
 const model = props.params.modelValue;
 
 // Computed Properties
 const getType = computed(() => {
   return props.params.type ? `select-${props.params.type}` : null;
+});
+
+const getOption = computed(() => (option: string) => {
+  if (props.params.id === "color") {
+    let text = t("modes." + option.toLowerCase());
+    return text;
+  } else {
+    return option;
+  }
 });
 
 // Methods
@@ -27,10 +40,10 @@ const updateValue = (e: Event) => {
 
 <template>
   <div :class="['select', getType]">
-    <label v-if="params.label" :for="`select-${params.id}`" class="select__label">{{ params.label }}</label>
+    <label v-if="params.label" :for="`select-${params.id}`" class="select__label">{{ $t(params.label) }}</label>
     <select :id="`select-${params.id}`" v-model="model" @change="updateValue" class="select__itself">
       <option v-for="option in params.options" :key="option" :value="option">
-        {{ option }}
+        {{ getOption(option) }}
       </option>
     </select>
   </div>

@@ -9,7 +9,7 @@ const data = {
   id: "lang",
   modelValue: locale,
   options: availableLocales,
-  label: "Lang:",
+  label: "language",
 };
 </script>
 

@@ -3,6 +3,11 @@
     "title": "Dim Nuxt 3 Template"
   },
   "language": "Sprache",
+  "theme": "Mode",
+  "modes": {
+    "dark": "Licht",
+    "light": "Dunkel"
+  },
   "error": {
     "title": "Etwas hat schief gelaufen",
     "code": "Fehlercode",
