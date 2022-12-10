@@ -10,10 +10,7 @@ defineProps({
 
 <template>
   <article class="blog">
-    <header class="blog__tags">
-      <p><b>Select by Tag:</b> <OrganismBlogTags /></p>
-    </header>
-
+    <OrganismBlogTags />
     <main class="blog__body">
       <ContentList
         path="/blog"
@@ -41,11 +38,6 @@ defineProps({
 
 <style scoped lang="scss">
 .blog {
-  &__tags {
-    display: flex;
-    padding: grid.$gap;
-    background-color: colors.$bg-border-app;
-  }
   &__body {
     margin-top: grid.$gap;
     overflow: auto;

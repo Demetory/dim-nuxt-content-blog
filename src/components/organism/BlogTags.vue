@@ -21,5 +21,18 @@ function flattenTags(tags, key) {
 </script>
 
 <template>
-  <AtomTag v-for="(item, index) in tags" :key="`tag-${index}`" :tag="item" />
+  <header class="tags">
+    <p>
+      <b>Select by Tag: </b>
+      <AtomTag v-for="(item, index) in tags" :key="`tag-${index}`" :tag="item" />
+    </p>
+  </header>
 </template>
+
+<style scoped lang="scss">
+.tags {
+  display: flex;
+  padding: grid.$gap;
+  background-color: colors.$bg-border-app;
+}
+</style>

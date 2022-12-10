@@ -30,7 +30,7 @@ const isLast = computed(() => (index: number, data: Object) => {
 
 <style scoped lang="scss">
 .copyright {
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
 }
 </style>

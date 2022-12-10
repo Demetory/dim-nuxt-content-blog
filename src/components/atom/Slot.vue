@@ -60,7 +60,7 @@
   }
 
   &__head {
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
   }
 
   &__body {
@@ -70,6 +70,10 @@
     :slotted(p),
     :slotted(li) {
       line-height: 2.4rem;
+    }
+
+    :slotted(p) {
+      margin-top: 0.6rem;
     }
   }
 }
@@ -89,4 +93,3 @@
   }
 }
 </style>
-

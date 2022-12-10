@@ -1,23 +1,44 @@
 {
-  "layouts": {
-    "title": "Dim Nuxt 3 Template"
+  "common": {
+    "siteTitle": "NuxtContent Blog Starter Template",
+    "siteNavi": {
+      "home": "Главная",
+      "example": "Примеры",
+      "blog": "Блог",
+      "error": "404"
+    },
+    "siteSwitcher": {
+      "lang": {
+        "title": "Язык"
+      },
+      "mode": {
+        "title": "Режим",
+        "body": {
+          "dark": "Тёмный",
+          "light": "Светлый"
+        }
+      }
+    }
   },
-  "language": "Язык",
-  "theme": "Режим",
-  "modes": {
-    "dark": "Темный",
-    "light": "Светлый"
-  },
-  "error": {
-    "title": "Что-то пошло не так",
-    "code": "Код ошибки",
-    "message": "Сообщение",
-    "back": "На главную"
-  },
-  "navi": {
-    "home": "Главная",
-    "example": "Примеры",
-    "blog": "Блог",
-    "error": "404"
+
+  "pages": {
+    "error": {
+      "title": "Что-то пошло не так",
+      "body": {
+        "code": "Код ошибки",
+        "message": "Сообщение",
+        "back": "На главную"
+      }
+    },
+    "home": {
+      "about": {
+        "title": "O проекте",
+        "body": [
+          "Проект построен на фрейморке {Nuxt} и модуле управления конентом {NuxtContent}.",
+          "В качестве сборщика используется {Vite}.",
+          "Основан на шаблоне {DimNuxtTemplate} с {Atomic}, поддержкой {TypeScript}, и {SFC}."
+        ]
+      }
+    }
   }
 }

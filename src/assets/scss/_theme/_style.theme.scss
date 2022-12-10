@@ -19,7 +19,6 @@ body {
     content: "";
     backface-visibility: hidden;
     position: fixed;
-    background-color: colors.$bg-border-app;
     z-index: grid.$zindex-border-app;
   }
 }
@@ -69,6 +68,28 @@ body {
 
   @media screen and (max-width: 800px) {
     padding: calc(grid.$border-app / 2);
+  }
+}
+
+html.mode-dark,
+.mode-dark body {
+  color: colors.$font-main-dark;
+  background-color: colors.$bg-body-dark;
+
+  &::before,
+  &::after {
+    background-color: colors.$bg-border-app-dark;
+  }
+}
+
+html.mode-light,
+.mode-light body {
+  color: colors.$font-main-light;
+  background-color: colors.$bg-body-light;
+
+  &::before,
+  &::after {
+    background-color: colors.$bg-border-app-light;
   }
 }
 

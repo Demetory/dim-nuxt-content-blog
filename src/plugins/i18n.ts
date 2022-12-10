@@ -16,6 +16,7 @@ export default defineNuxtPlugin(({ vueApp }) => {
     lazy: true,
     fallbackLocale: "en",
     availableLocales: ["en", "de", "ru"],
+    enableInSFC: true,
     strategy: "prefix",
     defaultLocale: "en",
     detectBrowserLanguage: {

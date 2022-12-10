@@ -9,7 +9,7 @@ const filter = ref(tags?.split(","));
 
 // Hooks
 definePageMeta({
-  title: "navi.blog",
+  title: "common.siteNavi.blog",
 });
 </script>
 

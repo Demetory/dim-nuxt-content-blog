@@ -1,4 +1,8 @@
 <script setup lang="ts">
+// Modules
+import { useI18n } from "vue-i18n";
+import { useExamplePiniaStore } from "@/store/examplePinia";
+
 // Types
 import IError from "@/types/IError";
 
@@ -10,6 +14,18 @@ defineProps({
   },
 });
 
+// Data
+const { locale } = useI18n();
+const examplePiniaStore = useExamplePiniaStore();
+
+// Computed Properties
+const colorMode = computed(() => {
+  if (typeof examplePiniaStore.colorMode === "string") {
+    let result = examplePiniaStore.colorMode.toLocaleLowerCase();
+    return `mode-${result}`;
+  }
+});
+
 // Methods
 InitApp();
 
@@ -17,7 +33,7 @@ const handleError = () => clearError({ redirect: "/" });
 </script>
 
 <template>
-  <Html :lang="$i18n.locale">
+  <Html :lang="$i18n.locale" :class="colorMode">
     <Body>
       <NoScript>
         <section class="noscript">
@@ -31,11 +47,11 @@ const handleError = () => clearError({ redirect: "/" });
 
       <NuxtLayout>
         <section class="page-error">
-          <h1>{{ $t("error.title") }}</h1>
-          <p>{{ $t("error.code") }}: {{ error.statusCode }}</p>
-          <p>{{ $t("error.message") }}: {{ error.statusMessage }}</p>
+          <h1>{{ $t("pages.error.title") }}</h1>
+          <p>{{ $t("pages.error.body.code") }}: {{ error.statusCode }}</p>
+          <p>{{ $t("pages.error.body.message") }}: {{ error.statusMessage }}</p>
           <p>
-            <a @click.stop="handleError">{{ $t("error.back") }}</a>
+            <a @click.stop="handleError">{{ $t("pages.error.body.back") }}</a>
           </p>
         </section>
       </NuxtLayout>
@@ -50,6 +66,10 @@ const handleError = () => clearError({ redirect: "/" });
   flex: 1;
   justify-content: center;
   padding: grid.$gap;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
 
   p {
     margin: 1rem 0;
