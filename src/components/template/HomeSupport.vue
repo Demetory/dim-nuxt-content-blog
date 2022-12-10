@@ -16,14 +16,16 @@ const getLinkUrl = (value: string) => {
     <template #icon>
       <IconSupport class="icon" />
     </template>
-    <template #heading> Support </template>
+    <template #heading> {{ $t(`pages.home.support.title`) }} </template>
     <template #content>
-      <p>
-        Visit my
-        <a :href="getLinkUrl('homepage')" target="_blank" rel="noopener">homepage</a>
-        and this
-        <a :href="getLinkUrl('repo')" target="_blank" rel="noopener">template repo</a>
-      </p>
+      <i18n-t keypath="pages.home.support.body[0]" tag="p" scope="global">
+        <template #Homepage>
+          <a :href="getLinkUrl('homepage')" target="_blank" rel="noopener">Demetory</a>
+        </template>
+        <template #Repo>
+          <a :href="getLinkUrl('repo')" target="_blank" rel="noopener">Dim-Nuxt-Content-Blog</a>
+        </template>
+      </i18n-t>
     </template>
   </AtomSlot>
 </template>
