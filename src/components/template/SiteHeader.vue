@@ -3,7 +3,10 @@
     <div class="header__wrap">
       <section class="header__logo">
         <AtomCube />
-        <h1 class="header__title">Dim Nuxt&nbsp;3 + NuxtContent&nbsp;2 Template</h1>
+        <h1 class="header__title">
+          NuxtContent<br />
+          Blog Starter Template
+        </h1>
         <MoleculeNavi />
         <div class="header__switchers">
           <OrganismSwitchLang />
@@ -40,6 +43,7 @@
 
   &__title {
     margin: 1rem 0;
+    line-height: 120%;
     text-align: center;
   }
 

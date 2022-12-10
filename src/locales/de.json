@@ -1,23 +1,44 @@
 {
-  "layouts": {
-    "title": "Dim Nuxt 3 Template"
+  "common": {
+    "siteTitle": "NuxtContent Blog Starter Template",
+    "siteNavi": {
+      "home": "Startseite",
+      "example": "Beispiele",
+      "blog": "Blog",
+      "error": "404"
+    },
+    "siteSwitcher": {
+      "lang": {
+        "title": "Sprache"
+      },
+      "mode": {
+        "title": "Farbschema",
+        "body": {
+          "dark": "Dunkel",
+          "light": "Licht"
+        }
+      }
+    }
   },
-  "language": "Sprache",
-  "theme": "Mode",
-  "modes": {
-    "dark": "Dunkel",
-    "light": "Licht"
-  },
-  "error": {
-    "title": "Etwas hat schief gelaufen",
-    "code": "Fehlercode",
-    "message": "Meldung",
-    "back": "Zurück zur Startseite"
-  },
-  "navi": {
-    "home": "Startseite",
-    "example": "Beispiele",
-    "blog": "Blog",
-    "error": "404"
+
+  "pages": {
+    "error": {
+      "title": "Etwas hat schief gelaufen",
+      "body": {
+        "code": "Fehlercode",
+        "message": "Meldung",
+        "back": "Zurück zur Startseite"
+      }
+    },
+    "home": {
+      "about": {
+        "title": "Um was geht's",
+        "body": [
+          "Das Projekt auf {Nuxt} und {NuxtContent} gebaut.",
+          "Das Development- und Build-Tool {Vite}.",
+          "Basiert auf {DimNuxtTemplate} Vorlage, strukturiert mit {Atomic}, mit volle {TypeScript} unterstützung, und {SFC}."
+        ]
+      }
+    }
   }
 }

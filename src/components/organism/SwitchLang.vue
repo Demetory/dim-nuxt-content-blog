@@ -9,7 +9,7 @@ const data = {
   id: "lang",
   modelValue: locale,
   options: availableLocales,
-  label: "language",
+  label: "common.siteSwitcher.lang.title",
 };
 </script>
 

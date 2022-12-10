@@ -10,16 +10,6 @@ html {
   display: flex;
   flex: 1;
   font-size: 62.5%;
-
-  &.mode-dark body {
-    color: colors.$font-main-dark;
-    background-color: colors.$bg-body-dark;
-  }
-
-  &.mode-light body {
-    color: colors.$font-main-light;
-    background-color: colors.$bg-body-light;
-  }
 }
 
 body {

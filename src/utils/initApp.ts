@@ -6,7 +6,7 @@ import { computed } from "vue";
 const InitApp = () => {
   const route = useRoute();
   const { t } = useI18n();
-  const siteTitle = "Dim Nuxt 3 Template";
+  const siteTitle = t("common.siteTitle");
 
   const title = computed(() => {
     const translate = route.meta.title ? t(`${route.meta.title}`) : null;

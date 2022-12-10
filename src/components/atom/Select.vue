@@ -25,7 +25,7 @@ const getType = computed(() => {
 
 const getOption = computed(() => (option: string) => {
   if (props.params.id === "color") {
-    let text = t("modes." + option.toLowerCase());
+    let text = t("common.siteSwitcher.mode.body." + option.toLowerCase());
     return text;
   } else {
     return option;

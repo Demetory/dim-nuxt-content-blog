@@ -13,7 +13,7 @@ const data = {
   id: "color",
   modelValue: model,
   options: options,
-  label: "theme",
+  label: "common.siteSwitcher.mode.title",
 };
 </script>
 
