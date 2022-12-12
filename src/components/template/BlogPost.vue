@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // Props
 defineProps({
   article: {
@@ -54,10 +54,6 @@ defineProps({
   display: flex;
   flex-direction: column;
   padding: grid.$gap;
-
-  &-entry {
-    background-color: colors.$bg-border-app;
-  }
 
   &:not(:last-of-type) {
     margin-bottom: grid.$gap;
@@ -118,8 +114,6 @@ defineProps({
       flex-direction: column;
       margin-bottom: 1rem;
       padding: grid.$gap;
-      border-left: solid 4px colors.$grey;
-      background-color: colors.$bg-border-app;
 
       P:last-of-type {
         margin: 0;
@@ -137,7 +131,6 @@ defineProps({
         flex-direction: column;
         padding: grid.$gap;
         border-radius: grid.$border-radius;
-        background-color: colors.$bg-border-app;
       }
     }
 
@@ -147,11 +140,6 @@ defineProps({
         line-height: 2.2rem;
       }
     }
-
-    /*
-    a[href^="#"] {
-    }
-    */
   }
 
   &__footer {
@@ -162,7 +150,6 @@ defineProps({
     &-page {
       margin-top: grid.$gap;
       padding: grid.$gap;
-      background-color: colors.$bg-border-app;
     }
 
     span {
@@ -172,6 +159,56 @@ defineProps({
       &:not(:last-of-type) {
         margin-right: 1rem;
       }
+    }
+  }
+}
+
+.mode-dark .post {
+  &-entry {
+    background-color: colors.$black;
+  }
+
+  &__content {
+    blockquote {
+      border-left: solid 4px colors.$grey;
+      background-color: colors.$black;
+    }
+
+    pre {
+      code {
+        background-color: colors.$black;
+      }
+    }
+  }
+
+  &__footer {
+    &-page {
+      background-color: colors.$black;
+    }
+  }
+}
+
+.mode-light .post {
+  &-entry {
+    background-color: colors.$bg-border-app;
+  }
+
+  &__content {
+    blockquote {
+      border-left: solid 4px colors.$grey;
+      background-color: colors.$bg-border-app;
+    }
+
+    pre {
+      code {
+        background-color: colors.$bg-border-app;
+      }
+    }
+  }
+
+  &__footer {
+    &-page {
+      background-color: colors.$bg-border-app;
     }
   }
 }

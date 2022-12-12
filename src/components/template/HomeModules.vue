@@ -3,7 +3,7 @@
     <template #icon>
       <IconModule class="icon" />
     </template>
-    <template #heading> {{ $t(`pages.home.modules.title`) }} </template>
+    <template #heading> Installed Modules </template>
     <template #content>
       <ul>
         <li>

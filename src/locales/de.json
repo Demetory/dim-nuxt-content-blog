@@ -29,31 +29,6 @@
         "message": "Meldung",
         "back": "Zurück zur Startseite"
       }
-    },
-    "home": {
-      "about": {
-        "title": "Um was geht's",
-        "body": [
-          "Das Projekt auf {Nuxt} und {NuxtContent} gebaut.",
-          "Das Development- und Build-Tool {Vite}.",
-          "Basiert auf {DimNuxtTemplate} Vorlage, strukturiert mit {Atomic}, mit volle {TypeScript} unterstützung, und {SFC}."
-        ]
-      },
-      "tooling": {
-        "title": "Werkzeuge",
-        "body": [
-          "Empfohlene IDE: {VSCode} + {Volar} + {VueDevTools}",
-          "E2E-Testierung: {Cypress}",
-          "Unit-Test-Framework: {Vitest}"
-        ]
-      },
-      "modules": {
-        "title": "Installierte Module"
-      },
-      "support": {
-        "title": "Support",
-        "body": ["Besuche my Site {Homepage} und dieses Projekt Repo {Repo}"]
-      }
     }
   }
 }

@@ -29,31 +29,6 @@
         "message": "Message",
         "back": "Back to home"
       }
-    },
-    "home": {
-      "about": {
-        "title": "Whats this about",
-        "body": [
-          "Based on {Nuxt} framework with {NuxtContent} module.",
-          "Used {Vite} as project build tool.",
-          "Built on {DimNuxtTemplate} with full {TypeScript} support, used {Atomic} and {SFC}."
-        ]
-      },
-      "tooling": {
-        "title": "Tooling",
-        "body": [
-          "Recommended IDE: {VSCode} + {Volar} + {VueDevTools}",
-          "End-to-End testing framework: {Cypress}",
-          "Unit testing framework: {Vitest}"
-        ]
-      },
-      "modules": {
-        "title": "Installed Modules"
-      },
-      "support": {
-        "title": "Support",
-        "body": ["Visit my Homepage {Homepage} and check this project repo {Repo}"]
-      }
     }
   }
 }
