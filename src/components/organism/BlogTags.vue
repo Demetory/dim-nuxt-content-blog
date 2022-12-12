@@ -1,15 +1,15 @@
-<script setup>
+<script setup lang="ts">
 // Data
 const { data } = await useAsyncData("tags", () => queryContent("blog").only(["tags"]).find());
-const tags = [...new Set(flattenTags(data.value, "tags"))];
+const tags: any = [...Array.from(new Set(flattenTags(data.value, "tags")))];
 
 // Methods
-function flattenTags(tags, key) {
+function flattenTags(tags: any, key: any) {
   let _tags = tags
-    .map((tag) => {
+    .map((tag: any) => {
       let _tag = tag;
       if (tag[key]) {
-        let flattened = flattenTags(tag[key]);
+        let flattened = flattenTags(tag[key], null);
         _tag = flattened;
       }
       return _tag;
@@ -33,6 +33,13 @@ function flattenTags(tags, key) {
 .tags {
   display: flex;
   padding: grid.$gap;
+}
+
+.mode-dark .tags {
+  background-color: colors.$black;
+}
+
+.mode-light .tags {
   background-color: colors.$bg-border-app;
 }
 </style>

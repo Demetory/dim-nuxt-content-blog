@@ -19,10 +19,8 @@ const getLinkUrl = (value: string) => {
     <template #heading> Support </template>
     <template #content>
       <p>
-        Visit my
-        <a :href="getLinkUrl('homepage')" target="_blank" rel="noopener">homepage</a>
-        and this
-        <a :href="getLinkUrl('repo')" target="_blank" rel="noopener">template repo</a>
+        Visit my <a :href="getLinkUrl('homepage')" target="_blank" rel="noopener">Homepage</a> and check this
+        <a :href="getLinkUrl('repo')" target="_blank" rel="noopener">project repo</a>
       </p>
     </template>
   </AtomSlot>

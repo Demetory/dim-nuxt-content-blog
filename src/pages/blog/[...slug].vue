@@ -1,38 +1,40 @@
-<script setup>
+<script setup lang="ts">
 // Data
 const { path } = useRoute();
-const { data } = await useAsyncData(`content-${removeSlash(path)}`, async () => {
-  let article = queryContent()
-    .where({ _path: removeSlash(path) })
-    .findOne();
-  let surround = queryContent()
-    .only(["_path", "title", "description"])
-    .sort({ date: 1 })
-    .findSurround(removeSlash(path));
+const { data } = reactive(
+  await useAsyncData(`content-${removeSlash(path)}`, async () => {
+    let article = queryContent()
+      .where({ _path: removeSlash(path) })
+      .findOne();
+    let surround = queryContent()
+      .only(["_path", "title", "description"])
+      .sort({ date: 1 })
+      .findSurround(removeSlash(path));
 
-  return {
-    article: await article,
-    surround: await surround,
-  };
-});
+    return {
+      article: await article,
+      surround: await surround,
+    };
+  })
+);
 
 // Hooks
 useHead({
-  title: data.value.article.title,
+  title: data!.article.title,
 });
 
 // Computed Properties
-const getSurround = computed(() => (param) => {
-  const [prev, next] = data.value.surround;
+const getSurround = computed(() => (param: string) => {
+  const [prev, next] = data!.surround;
   return param === "prev" ? prev : next;
 });
 
 const getArticle = computed(() => {
-  return data.value.article;
+  return data!.article;
 });
 
 // Methods
-function removeSlash(path) {
+function removeSlash(path: string) {
   return path.replace(/\/+$/, "");
 }
 </script>

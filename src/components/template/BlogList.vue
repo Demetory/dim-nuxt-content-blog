@@ -1,11 +1,8 @@
-<script setup>
+<script setup lang="ts">
 // Props
-defineProps({
-  filter: {
-    type: (Array, Object, undefined),
-    required: true,
-  },
-});
+defineProps<{
+  filter?: string[];
+}>();
 </script>
 
 <template>

@@ -1,17 +1,8 @@
 <script setup lang="ts">
-// Types
-import type ISurroundLink from "@/types/ISurroundLink";
-
 // Props
 defineProps({
-  prev: {
-    type: Object as () => ISurroundLink,
-    required: false,
-  },
-  next: {
-    type: Object as () => ISurroundLink,
-    required: false,
-  },
+  prev: Object,
+  next: Object,
 });
 </script>
 
@@ -31,10 +22,17 @@ defineProps({
   display: flex;
   margin: grid.$gap;
   padding: grid.$gap;
-  background-color: colors.$bg-border-app;
 
   .next {
     margin-left: auto;
   }
+}
+
+.mode-dark .post-surround {
+  background-color: colors.$black;
+}
+
+.mode-light .post-surround {
+  background-color: colors.$bg-border-app;
 }
 </style>

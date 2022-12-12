@@ -29,16 +29,6 @@
         "message": "Meldung",
         "back": "Zurück zur Startseite"
       }
-    },
-    "home": {
-      "about": {
-        "title": "Um was geht's",
-        "body": [
-          "Das Projekt auf {Nuxt} und {NuxtContent} gebaut.",
-          "Das Development- und Build-Tool {Vite}.",
-          "Basiert auf {DimNuxtTemplate} Vorlage, strukturiert mit {Atomic}, mit volle {TypeScript} unterstützung, und {SFC}."
-        ]
-      }
     }
   }
 }

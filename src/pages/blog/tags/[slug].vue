@@ -1,11 +1,11 @@
-<script setup>
+<script setup lang="ts">
 // Data
 const {
   params: { slug },
 } = useRoute();
 
 // @ts-expect-error: not exist in type
-const filter = ref(slug?.split(","));
+const filter = ref(slug.split(","));
 
 // Hooks
 useHead({
