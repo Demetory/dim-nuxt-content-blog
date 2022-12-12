@@ -21,10 +21,10 @@ const colorMode = computed(() => {
     <template #heading> UseUse Example </template>
     <template #content>
       <p>
-        Mouse Position: <client-only>{{ x }} + {{ y }}</client-only>
+        Mouse Position: <ClientOnly>{{ x }} + {{ y }}</ClientOnly>
       </p>
       <p>
-        Local Store: <client-only>{{ colorMode }}</client-only>
+        Local Store: <ClientOnly>{{ colorMode }}</ClientOnly>
       </p>
       <p>VueUse <a href="https://vueuse.org/guide/" target="_blank" rel="noopener">official documentation</a></p>
     </template>
