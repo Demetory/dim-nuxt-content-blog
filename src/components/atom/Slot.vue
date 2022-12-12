@@ -4,10 +4,14 @@
       <slot name="icon" />
     </i>
     <div class="item__body">
-      <h2 class="item__head">
-        <slot name="heading" />
-      </h2>
-      <slot name="content" />
+      <header class="item__head">
+        <h2>
+          <slot name="heading" />
+        </h2>
+      </header>
+      <article class="item__content">
+        <slot name="content" />
+      </article>
     </div>
   </section>
 </template>

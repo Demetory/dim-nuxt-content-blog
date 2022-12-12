@@ -9,8 +9,10 @@
         </h1>
         <MoleculeNavi />
         <div class="header__switchers">
-          <OrganismSwitchLang />
-          <OrganismSwitchColor />
+          <ClientOnly>
+            <OrganismSwitchLang />
+            <OrganismSwitchColor />
+          </ClientOnly>
         </div>
       </section>
       <MoleculeCopyright />

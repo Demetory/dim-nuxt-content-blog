@@ -1,23 +1,18 @@
 <script setup lang="ts">
+import { objectHash } from "ohash";
+
 // Data
 const { data } = await useAsyncData("tags", () => queryContent("blog").only(["tags"]).find());
-const tags: any = [...Array.from(new Set(flattenTags(data.value, "tags")))];
+const _data = [...Array.from(new Set(data.value))];
+let tags: string[] = [];
 
-// Methods
-function flattenTags(tags: any, key: any) {
-  let _tags = tags
-    .map((tag: any) => {
-      let _tag = tag;
-      if (tag[key]) {
-        let flattened = flattenTags(tag[key], null);
-        _tag = flattened;
-      }
-      return _tag;
-    })
-    .flat(1);
-
-  return _tags;
+for (const iterator of _data) {
+  iterator.tags.forEach((element: string) => {
+    tags.push(element);
+  });
 }
+
+tags = [...new Set(tags)];
 </script>
 
 <template>

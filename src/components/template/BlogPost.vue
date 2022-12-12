@@ -42,7 +42,7 @@ const { isLoading, error } = useImage(imageOptions, { delay: 500 });
           <ContentSlot :value="article" />
 
           <template #empty>
-            <p class="empty">No content found.</p>
+            <p class="empty">No post found.</p>
           </template>
         </ContentRenderer>
       </div>

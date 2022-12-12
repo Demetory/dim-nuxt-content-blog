@@ -15,9 +15,9 @@ const examples = examplePiniaStore.examples;
     <template #heading> Pinia Example </template>
     <template #content>
       <p>
-        Count: <client-only>{{ examples.counter }}</client-only> | Input:
-        <client-only>{{ examples.textfield }}</client-only> | Mode:
-        <client-only>{{ examplePiniaStore.colorMode }}</client-only>
+        Count: <ClientOnly>{{ examples.counter }}</ClientOnly> | Input:
+        <ClientOnly>{{ examples.textfield }}</ClientOnly> | Mode:
+        <ClientOnly>{{ examplePiniaStore.colorMode }}</ClientOnly>
       </p>
       <p>
         <AtomButton @click.stop="examplePiniaStore.increment()">Increment</AtomButton>
