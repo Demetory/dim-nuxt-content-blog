@@ -14,6 +14,7 @@ const data = {
   modelValue: model,
   options: options,
   label: "common.siteSwitcher.mode.title",
+  translate: "mode",
 };
 </script>
 

@@ -1,6 +1,9 @@
 <script setup lang="ts">
+// Modules
+import { useImage } from "@vueuse/core";
+
 // Props
-defineProps({
+const props = defineProps({
   article: {
     type: Object,
     required: true,
@@ -10,6 +13,10 @@ defineProps({
     required: true,
   },
 });
+
+// Data
+const imageOptions = ref({ src: `/${props.article.img}` });
+const { isLoading, error } = useImage(imageOptions, { delay: 500 });
 </script>
 
 <template>
@@ -23,7 +30,9 @@ defineProps({
     <article class="post__body">
       <div class="post__cover">
         <NuxtLink :to="article._path">
-          <img :alt="`Dim NuxtContent Template | ${article.title}`" :src="`/${article.img}`" />
+          <span v-if="isLoading">Loading...</span>
+          <span v-else-if="error">Failed</span>
+          <img v-else :alt="`Dim NuxtContent Template | ${article.title}`" :src="imageOptions.src" />
         </NuxtLink>
       </div>
       <div v-if="type === 'page'" class="post__content">

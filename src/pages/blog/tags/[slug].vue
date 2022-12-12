@@ -1,18 +1,18 @@
 <script setup lang="ts">
 // Data
-const {
-  params: { slug },
-} = useRoute();
+const route = useRoute();
 
-// @ts-expect-error: not exist in type
-const filter = ref(slug.split(","));
-
-// Hooks
+// Methods
 useHead({
-  title: `Articles by tag: ${slug}`,
+  title: `Articles by tag: ${String(route.params.slug)}`,
+});
+definePageMeta({
+  type: "blog",
 });
 </script>
 
 <template>
-  <TemplateBlogList :filter="filter" />
+  <div class="page-wrapper">
+    <TemplateBlogList :filter="route.params.slug" />
+  </div>
 </template>

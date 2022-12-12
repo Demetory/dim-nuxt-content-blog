@@ -1,10 +1,13 @@
 <script setup lang="ts">
-// Hooks
+// Methods
 definePageMeta({
   title: "common.siteNavi.blog",
+  type: "blog",
 });
 </script>
 
 <template>
-  <TemplateBlogList />
+  <div class="page-wrapper">
+    <TemplateBlogList />
+  </div>
 </template>

@@ -21,12 +21,12 @@ function flattenTags(tags: any, key: any) {
 </script>
 
 <template>
-  <header class="tags">
+  <section class="tags">
     <p>
       <b>Select by Tag: </b>
       <AtomTag v-for="(item, index) in tags" :key="`tag-${index}`" :tag="item" />
     </p>
-  </header>
+  </section>
 </template>
 
 <style scoped lang="scss">

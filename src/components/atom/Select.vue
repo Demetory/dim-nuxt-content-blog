@@ -24,9 +24,8 @@ const getType = computed(() => {
 });
 
 const getOption = computed(() => (option: string) => {
-  if (props.params.id === "color") {
-    let text = t("common.siteSwitcher.mode.body." + option.toLowerCase());
-    return text;
+  if (props.params.translate) {
+    return t(`common.siteSwitcher.${props.params.translate}.body.` + option.toLowerCase());
   } else {
     return option;
   }
