@@ -1,21 +1,6 @@
-// Modules
-import { useI18n } from "vue-i18n";
-import { computed } from "vue";
-
 // Runs by application start
 const InitApp = () => {
-  const route = useRoute();
-  const { t } = useI18n();
-  const siteTitle = t("common.siteTitle");
-
-  const title = computed(() => {
-    const translate = route.meta.title ? t(`${route.meta.title}`) : null;
-    const result = translate ? `${siteTitle} | ${translate}` : siteTitle;
-    return result;
-  });
-
   useHead({
-    title: title,
     link: [
       {
         rel: "stylesheet",

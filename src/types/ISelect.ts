@@ -4,4 +4,5 @@ export default interface ISelect {
   options: string[];
   label?: string;
   type?: string;
+  translate?: string;
 }

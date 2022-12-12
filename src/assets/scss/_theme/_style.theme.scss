@@ -94,7 +94,7 @@ html.mode-light,
 }
 
 // Containers
-.page-container {
+.page {
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -102,15 +102,20 @@ html.mode-light,
   @media screen and (max-width: 1024px) {
     flex-direction: column;
   }
-}
 
-article {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-  padding: grid.$gap;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: grid.$gap;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
 }
 
 // Links

@@ -1,47 +1,24 @@
 <script setup lang="ts">
 // Data
-const { path } = useRoute();
-const { data } = reactive(
-  await useAsyncData(`content-${removeSlash(path)}`, async () => {
-    let article = queryContent()
-      .where({ _path: removeSlash(path) })
-      .findOne();
-    let surround = queryContent()
-      .only(["_path", "title", "description"])
-      .sort({ date: 1 })
-      .findSurround(removeSlash(path));
+const route = useRoute();
+const path = route.path.replace(/\/+$/, "");
 
-    return {
-      article: await article,
-      surround: await surround,
-    };
-  })
-);
-
-// Hooks
-useHead({
-  title: data!.article.title,
-});
-
-// Computed Properties
-const getSurround = computed(() => (param: string) => {
-  const [prev, next] = data!.surround;
-  return param === "prev" ? prev : next;
-});
-
-const getArticle = computed(() => {
-  return data!.article;
-});
+const article = await queryContent("blog").where({ _path: path }).findOne();
+const [prev, next] = await queryContent("blog").only(["_path", "title"]).sort({ date: 1 }).findSurround(path);
 
 // Methods
-function removeSlash(path: string) {
-  return path.replace(/\/+$/, "");
-}
+useHead({
+  title: article.title,
+});
+
+definePageMeta({
+  type: "blog",
+});
 </script>
 
 <template>
-  <section class="blog-page">
-    <TemplateBlogPost :article="getArticle" type="page" />
-    <MoleculePostSurround :prev="getSurround('prev')" :next="getSurround('next')" />
-  </section>
+  <div class="blog">
+    <TemplateBlogPost :article="article" type="page" />
+    <MoleculePostSurround :prev="prev" :next="next" />
+  </div>
 </template>

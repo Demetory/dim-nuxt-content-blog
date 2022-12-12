@@ -1,15 +1,15 @@
 <script setup lang="ts">
-// Hooks
+// Methods
 definePageMeta({
   title: "common.siteNavi.home",
 });
 </script>
 
 <template>
-  <article>
+  <div class="page-wrapper">
     <TemplateHomeAbout />
     <TemplateHomeTooling />
     <TemplateHomeModules />
     <TemplateHomeSupport />
-  </article>
+  </div>
 </template>

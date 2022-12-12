@@ -1,13 +1,13 @@
 <script setup lang="ts">
-// Hooks
+// Methods
 definePageMeta({
   title: "common.siteNavi.example",
 });
 </script>
 
 <template>
-  <article>
+  <div class="page-wrapper">
     <TemplateExamplesVueUse />
     <TemplateExamplesPinia />
-  </article>
+  </div>
 </template>
