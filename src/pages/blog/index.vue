@@ -2,12 +2,12 @@
 // Methods
 definePageMeta({
   title: "common.siteNavi.blog",
-  type: "blog",
 });
 </script>
 
 <template>
   <div class="page-wrapper">
+    <OrganismBlogTags />
     <TemplateBlogList />
   </div>
 </template>

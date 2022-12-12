@@ -35,8 +35,9 @@ const getSiteTitle = computed(() => {
 });
 
 // Methods
-useHead({ title: getSiteTitle });
 InitApp();
+
+useHead({ title: getSiteTitle });
 
 const handleError = () => clearError({ redirect: "/" });
 </script>

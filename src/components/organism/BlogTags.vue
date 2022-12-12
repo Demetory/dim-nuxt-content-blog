@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { objectHash } from "ohash";
-
 // Data
-const { data } = await useAsyncData("tags", () => queryContent("blog").only(["tags"]).find());
-const _data = [...Array.from(new Set(data.value))];
+const { data } = reactive(await useAsyncData("tags", () => queryContent("blog").only(["tags"]).find()));
+const _data = [...Array.from(new Set(data))];
 let tags: string[] = [];
 
 for (const iterator of _data) {

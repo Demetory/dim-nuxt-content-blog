@@ -11,7 +11,7 @@ const props = defineProps<{
 const query: QueryBuilderParams = {
   path: "/blog",
   only: ["title", "description", "tags", "_path", "img"],
-  // @ts-expect-error:
+  // @ts-expect-error: not exist in type
   where: { tags: { $contains: props.filter } },
 };
 </script>
