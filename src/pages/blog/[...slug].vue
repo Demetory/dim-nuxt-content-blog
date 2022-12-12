@@ -10,14 +10,11 @@ const [prev, next] = await queryContent("blog").only(["_path", "title"]).sort({ 
 useHead({
   title: article.title,
 });
-
-definePageMeta({
-  type: "blog",
-});
 </script>
 
 <template>
   <div class="blog">
+    <OrganismBlogTags />
     <TemplateBlogPost :article="article" type="page" />
     <MoleculePostSurround :prev="prev" :next="next" />
   </div>

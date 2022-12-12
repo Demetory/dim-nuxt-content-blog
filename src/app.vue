@@ -47,7 +47,6 @@ useHead({ title: getSiteTitle });
       <div class="page">
         <TemplateSiteHeader />
         <main :class="['page-container', `page-${String($route.name)}`]">
-          <OrganismBlogTags v-if="$route.meta.type" />
           <NuxtPage />
         </main>
       </div>

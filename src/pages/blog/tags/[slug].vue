@@ -6,13 +6,11 @@ const route = useRoute();
 useHead({
   title: `Articles by tag: ${String(route.params.slug)}`,
 });
-definePageMeta({
-  type: "blog",
-});
 </script>
 
 <template>
   <div class="page-wrapper">
+    <OrganismBlogTags />
     <TemplateBlogList :filter="route.params.slug" />
   </div>
 </template>
