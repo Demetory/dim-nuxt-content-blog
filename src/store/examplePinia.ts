@@ -2,16 +2,17 @@
 import { ref, reactive } from "vue";
 import { defineStore } from "pinia";
 
+// Modules
+import * as staticData from "@/content/example.json";
+
 // Store
 const useExamplePiniaStore = defineStore("examplePiniaStore", () => {
   // State
   const examples = reactive({ counter: 0, textfield: "Test" });
   const colorMode = ref({});
   const language = ref({});
-  const copyright = ref([
-    { id: 1, type: "homepage", text: "Demetory", url: "https://demetrey.ru/" },
-    { id: 2, type: "repo", text: "Github", url: "https://github.com/Demetory/dim-nuxt-content-blog" },
-  ]);
+  const links = ref(staticData.links);
+  const navi = ref(staticData.navi);
 
   // Methods
   const increment = () => {
@@ -22,11 +23,7 @@ const useExamplePiniaStore = defineStore("examplePiniaStore", () => {
     examples.counter--;
   };
 
-  const getCopyrightUrl = (value: string) => {
-    return copyright.value.find((link) => link["type"] === value)?.url;
-  };
-
-  return { examples, copyright, colorMode, language, increment, decrement, getCopyrightUrl };
+  return { examples, colorMode, language, links, navi, increment, decrement };
 });
 
 // Export

@@ -3,6 +3,10 @@
 definePageMeta({
   title: "common.siteNavi.home",
 });
+
+useHead({
+  meta: [{ name: "description", content: "NuxtContent Starter Template" }],
+});
 </script>
 
 <template>

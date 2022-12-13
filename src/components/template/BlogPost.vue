@@ -16,7 +16,7 @@ const props = defineProps({
 
 // Data
 const imageOptions = ref({ src: `/${props.article.img}` });
-const { isLoading, error } = useImage(imageOptions, { delay: 500 });
+const { isLoading, error } = useImage(imageOptions, { delay: 250 });
 </script>
 
 <template>

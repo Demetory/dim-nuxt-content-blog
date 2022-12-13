@@ -34,7 +34,7 @@ useHead({ title: getSiteTitle });
     <Body>
       <NoScript>
         <section class="noscript">
-          <img src="/images/fatality.svg" />
+          <img alt="Fatality" src="/images/fatality.svg" />
           <div>
             <h1>Easy, Tiger</h1>
             <p>Turn JavaScript on, dont be so paraniod.</p>
