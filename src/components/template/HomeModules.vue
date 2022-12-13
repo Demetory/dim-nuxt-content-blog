@@ -1,3 +1,11 @@
+<script setup lang="ts">
+// Modules
+import { useExamplePiniaStore } from "@/store/examplePinia";
+
+// Data
+const examplePiniaStore = useExamplePiniaStore();
+</script>
+
 <template>
   <AtomSlot>
     <template #icon>
@@ -6,27 +14,14 @@
     <template #heading> Installed Modules </template>
     <template #content>
       <ul>
-        <li>
-          Vue Store:
-          <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>
-        </li>
-        <li>
-          Vue Composition Utilities:
-          <a href="https://vueuse.org/" target="_blank" rel="noopener">VueUse</a>
-        </li>
-        <li>
-          Internationalization framework:
-          <a href="https://v8.i18n.nuxtjs.org/" target="_blank" rel="noopener">Nuxt i18n</a>
-        </li>
-        <li>
-          CSS Preprocessor:
-          <a href="https://sass-lang.com/" target="_blank" rel="noopener">Sass</a>
-        </li>
+        <li>Vue Store: <AtomLink :params="examplePiniaStore.links.pinia" /></li>
+        <li>Vue Composition Utilities: <AtomLink :params="examplePiniaStore.links.vueuse" /></li>
+        <li>Internationalization framework: <AtomLink :params="examplePiniaStore.links.i18n" /></li>
+        <li>CSS Preprocessor: <AtomLink :params="examplePiniaStore.links.scss" /></li>
         <li>
           Code quality:
-          <a href="https://eslint.org/" target="_blank" rel="noopener">ESLint</a>
-          +
-          <a href="https://prettier.io/" target="_blank" rel="noopener">Prettier</a>
+          <AtomLink :params="examplePiniaStore.links.eslint" /> +
+          <AtomLink :params="examplePiniaStore.links.prettier" />
         </li>
       </ul>
     </template>

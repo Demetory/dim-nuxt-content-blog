@@ -36,8 +36,8 @@ This is the list
 ## Component
 
 Example of working component inside of markdown-page
-::InfoBox{type="error"}
-Here's a handy bit of information for you!
+::Textbox{msg="«Hello from first blog post»"}
+
 <br/><br/>
 
 Have fun!

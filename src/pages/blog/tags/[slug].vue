@@ -5,6 +5,7 @@ const route = useRoute();
 // Methods
 useHead({
   title: `Articles by tag: ${String(route.params.slug)}`,
+  meta: [{ name: "description", content: "NuxtContent Starter Template" }],
 });
 </script>
 

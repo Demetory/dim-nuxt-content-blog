@@ -7,22 +7,24 @@
 
 ## Features
 
-- Full configured and ready
+- Full configured and production ready
 - No complex || heavy dependencies
 - Atomic Design Pattern
-- Prepared public folder (icons, robots.txt, htaccess, humans.txt, etc)
+- Configured public folder (icons, robots.txt, htaccess, humans.txt, etc)
 - CSS normalization
 - SCSS Maps and Modules in global scope
-- Simple code examples for Storage, Composables, TypeScript, Modules
+- Containes simple code examples
 - ESLint + Prettier for better code quality
 - Cypress + Vitest for testing
-- Localiztion example
+- Localiztion examples
+- Light / Dark color modes
 - Custom error page
+- All Google Lighthouse metrics are green ^-^
   <br/><br/>
 
 ## Preview
 
-[Live Demo](http://nuxt-content-template.demetrey.ru/)
+[Live Demo](https://nuxt-content-template.demetrey.ru/)
 <br/><br/>
 ![image](/src/public/cover.jpg)
 <br/><br/>

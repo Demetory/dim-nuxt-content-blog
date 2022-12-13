@@ -26,6 +26,8 @@ const getType = computed(() => {
 const getOption = computed(() => (option: string) => {
   if (props.params.translate) {
     return t(`common.siteSwitcher.${props.params.translate}.body.` + option.toLowerCase());
+  } else if (props.params.id === "lang") {
+    return option.toLocaleUpperCase();
   } else {
     return option;
   }

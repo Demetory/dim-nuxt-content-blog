@@ -1,15 +1,14 @@
 <script setup lang="ts">
+// Modules
+import { useExamplePiniaStore } from "@/store/examplePinia";
+
 // Data
-const data = [
-  { path: "/", translate: "common.siteNavi.home" },
-  { path: "/examples", translate: "common.siteNavi.example" },
-  { path: "/blog", translate: "common.siteNavi.blog" },
-];
+const examplePiniaStore = useExamplePiniaStore();
 </script>
 
 <template>
   <nav>
-    <NuxtLink v-for="(link, index) in data" :key="`navi-${index}`" :to="link.path">
+    <NuxtLink v-for="(link, index) in examplePiniaStore.navi" :key="`navi-${index}`" :to="link.path">
       {{ $t(`${link.translate}`) }}
     </NuxtLink>
   </nav>

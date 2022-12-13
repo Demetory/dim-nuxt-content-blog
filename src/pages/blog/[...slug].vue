@@ -9,6 +9,7 @@ const [prev, next] = await queryContent("blog").only(["_path", "title"]).sort({ 
 // Methods
 useHead({
   title: article.title,
+  meta: [{ name: "description", content: "NuxtContent Starter Template" }],
 });
 </script>
 
