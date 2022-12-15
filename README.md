@@ -13,7 +13,7 @@
 - Configured public folder (icons, robots.txt, htaccess, humans.txt, etc)
 - CSS normalization
 - SCSS Maps and Modules in global scope
-- Containes simple code examples
+- Contains simple code examples
 - ESLint + Prettier for better code quality
 - Cypress + Vitest for testing
 - Localiztion examples
@@ -27,6 +27,8 @@
 [Live Demo](https://nuxt-content-template.demetrey.ru/)
 <br/><br/>
 ![image](/src/public/cover.jpg)
+<br/>
+![image](/src/public/images/lighthouse.png)
 <br/><br/>
 
 ## Requirements
@@ -91,7 +93,7 @@ npm run build
 npm run generate
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment).
 
 ## Linting
 
