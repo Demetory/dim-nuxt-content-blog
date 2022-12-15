@@ -16,7 +16,7 @@ const getYear = computed(() => {
 <template>
   <p class="copyright">
     {{ getYear }} &copy; <AtomLink :params="examplePiniaStore.links.demetory" /> |
-    <AtomLink :params="examplePiniaStore.links.nuxttemplate" />
+    <AtomLink :params="examplePiniaStore.links.projectrepo" />
   </p>
 </template>
 

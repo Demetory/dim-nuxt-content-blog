@@ -14,8 +14,8 @@ const examplePiniaStore = useExamplePiniaStore();
     <template #heading> Support </template>
     <template #content>
       <p>
-        Visit my homepage <AtomLink :params="examplePiniaStore.links.demetory" /> and check this project repo
-        <AtomLink :params="examplePiniaStore.links.nuxttemplate" />
+        Visit my homepage <AtomLink :params="examplePiniaStore.links.demetory" /> and check this
+        <AtomLink :params="examplePiniaStore.links.projectrepo" />
       </p>
     </template>
   </AtomSlot>
