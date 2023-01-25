@@ -9,6 +9,7 @@
 
 - Full configured and production ready
 - No complex || heavy dependencies
+- Google Lighthouse Reports are 100% in green zone
 - Atomic Design Pattern
 - Configured public folder (icons, robots.txt, htaccess, humans.txt, etc)
 - CSS normalization
@@ -33,8 +34,8 @@
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/en/): >= 16.11.0
-- [npm](https://www.npmjs.com/): >= 6.32.4
+- [Node.js](https://nodejs.org/en/): >= 16.17.0
+- [npm](https://www.npmjs.com/): >= 9.2.0
   <br/><br/>
 
 ## Recommended IDE
