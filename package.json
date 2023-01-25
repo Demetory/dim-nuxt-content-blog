@@ -1,9 +1,23 @@
 {
-  "private": true,
+  "name": "dim-nuxt-content-blog",
+  "description": "Nuxt Content Starter Template",
+  "author": "Demetory",
+  "version": "0.0.3",
   "engines": {
-    "node": "^16.11.0 || ^17.0.0 || || ^18.0.0",
-    "npm": ">= 6.32.4"
+    "node": ">= 16.17.0",
+    "npm": ">= 9.2.0"
   },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
