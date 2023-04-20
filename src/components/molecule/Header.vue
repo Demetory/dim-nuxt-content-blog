@@ -33,9 +33,11 @@ header {
     justify-content: center;
     margin: auto auto;
   }
+
   .switcher {
     margin: 48px 0 32px;
   }
+
   .heading {
     margin: 1rem 0;
     text-align: center;
