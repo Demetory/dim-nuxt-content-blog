@@ -15,7 +15,8 @@ const props = defineProps({
 });
 
 // Data
-const imageOptions = ref({ src: `/${props.article.img}` });
+const url = import.meta.env.VITE_SITE_URL;
+const imageOptions = ref({ src: url + "/" + props.article.img });
 const { isLoading, error } = useImage(imageOptions, { delay: 250 });
 </script>
 
