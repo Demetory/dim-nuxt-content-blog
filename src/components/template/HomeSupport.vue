@@ -7,16 +7,16 @@ const examplePiniaStore = useExamplePiniaStore();
 </script>
 
 <template>
-  <AtomSlot>
+  <TemplateSlot>
     <template #icon>
-      <IconSupport class="icon" />
+      <AtomIcon name="support" />
     </template>
-    <template #heading> Support </template>
+    <template #heading>Support</template>
     <template #content>
       <p>
-        Visit my homepage <AtomLink :params="examplePiniaStore.links.demetory" /> and check this
-        <AtomLink :params="examplePiniaStore.links.projectrepo" />
+        Visit my homepage <AtomLink :link="examplePiniaStore.getLink('link-homepage')" /> and this project repo on
+        <AtomLink :link="examplePiniaStore.getLink('link-repo')" />
       </p>
     </template>
-  </AtomSlot>
+  </TemplateSlot>
 </template>

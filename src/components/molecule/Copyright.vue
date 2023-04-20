@@ -1,28 +1,27 @@
 <script setup lang="ts">
 // Modules
-import { useExamplePiniaStore } from "@/store/examplePinia";
+import { useExamplePiniaStore } from "~/store/examplePinia";
 
 // Data
 const examplePiniaStore = useExamplePiniaStore();
-const date: Date = new Date();
-const dateTZ: Date = useDateTZ(date, "Asia/Jakarta");
+const dateTZ: Date = useDateTZ(new Date(), "Asia/Jakarta");
 
-// Computed Properties
-const getYear = computed(() => {
+// Computed properties
+const computedYear = computed(() => {
   return new String(useDateToRoman(dateTZ.getFullYear()));
 });
 </script>
 
 <template>
   <p class="copyright">
-    {{ getYear }} &copy; <AtomLink :params="examplePiniaStore.links.demetory" /> |
-    <AtomLink :params="examplePiniaStore.links.projectrepo" />
+    {{ computedYear }} &copy; <AtomLink :link="examplePiniaStore.getLink('link-homepage')" /> |
+    <AtomLink :link="examplePiniaStore.getLink('link-repo')" />
   </p>
 </template>
 
 <style scoped lang="scss">
 .copyright {
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: center;
 }
 </style>

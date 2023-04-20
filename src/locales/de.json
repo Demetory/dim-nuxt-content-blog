@@ -1,8 +1,10 @@
 {
   "common": {
-    "siteTitle": "NuxtContent Blog Starter Template",
+    "siteTitle": "Nuxt Starter Template",
     "siteNavi": {
       "home": "Startseite",
+      "login": "Einloggen",
+      "secret": "Anmeldedaten",
       "example": "Beispiele",
       "blog": "Blog",
       "error": "404"
@@ -12,7 +14,7 @@
         "title": "Sprache"
       },
       "mode": {
-        "title": "Farbschema",
+        "title": "wechseln zu",
         "body": {
           "dark": "Dunkel",
           "light": "Licht"
@@ -28,7 +30,16 @@
         "code": "Fehlercode",
         "message": "Meldung",
         "back": "Zurück zur Startseite"
-      }
+      },
+      "404": "Seite nicht gefunden"
+    },
+    "login": {
+      "title": "Einloggen",
+      "body": "Ich bin nur Anmeldeseite, und das ist Gut so!"
+    },
+    "secret": {
+      "title": "Secretseite",
+      "body": "Ich bin das sehr geheime Seite"
     }
   }
 }

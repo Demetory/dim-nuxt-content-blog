@@ -1,5 +1,5 @@
 // Just an example logo ^-^
-const exampleLogo = `
+const exampleLogo: string = `
 <svg width="137" height="137" version="1.1" id="Demetory" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 137 137" enable-background="new 0 0 137 137" xml:space="preserve">
   <rect width="137" height="137"/>
   <path fill="#FFFFFF" d="M86,17L86,17l-64,0v100h64v0c21-0.5,37.9-22.7,37.9-50C123.9,39.7,107,17.6,86,17z M77,88C77,88,77,88,77,88 L77,88h-3v12.2L61.8,88H53V45h24v0c0,0,0,0,0,0c5.8,0,10.5,9.6,10.5,21.5C87.6,78.4,82.8,88,77,88z"/>

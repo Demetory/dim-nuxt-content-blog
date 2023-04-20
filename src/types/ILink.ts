@@ -1,6 +1,6 @@
-export default interface ILink {
-  id?: string | number;
+export interface ILink {
+  id?: number;
+  type?: string;
   text: string;
   url: string;
-  type?: string;
 }

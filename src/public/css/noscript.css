@@ -1,7 +1,8 @@
-noscript,
-.noscript {
-  z-index: 999999999999;
-  position: fixed;
+/* ==========================================================================
+   CSS NoScript Block
+   ========================================================================== */
+
+noscript {
   display: flex;
   margin: 0;
   padding: 20px;
@@ -14,25 +15,21 @@ noscript,
   background-color: #efefef;
 }
 
-noscript img,
-.noscript img {
+noscript img {
   max-width: 280px;
 }
 
-noscript div,
-.noscript div {
+noscript div {
   font-family: "Ubuntu", sans-serif;
 }
 
-noscript div h1,
-.noscript div h1 {
+noscript div h1 {
   padding: 1rem 0;
   font-size: 3rem;
   font-weight: 900;
 }
 
-noscript div p,
-.noscript div p {
+noscript div p {
   font-size: 1.5rem;
   font-weight: 600;
 }

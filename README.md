@@ -1,42 +1,32 @@
-# Din Nuxt 3 + NuxtContent 2 Starter
+# Vite + Nuxt Content Starter Template
 
-- [Nuxt 3](https://nuxt.com/) + [NuxtContent 2](https://content.nuxtjs.org/) Starter Blog Template
-- Uses [TypeScript](https://www.typescriptlang.org/) and [Script Setup SFC](https://vuejs.org/api/sfc-script-setup.html)
+- [Nuxt Content 2](https://content.nuxtjs.org/) + [Vite 4](https://vitejs.dev/) Minimalistic Starter Template
+- Built with [TypeScript 5](https://www.typescriptlang.org/) and [Script Setup SFC](https://vuejs.org/api/sfc-script-setup.html)
 - Designed with [Atomic Pattern](https://vuefront.com/develop/)
-- Based on [Dim-Nuxt3-Template](https://github.com/Demetory/dim-nuxt3-template)
 
 ## Features
 
-- Full configured and production ready
 - No complex || heavy dependencies
 - Google Lighthouse Reports are 100% in green zone
 - Atomic Design Pattern
 - Configured public folder (icons, robots.txt, htaccess, humans.txt, etc)
-- CSS normalization
-- SCSS Maps and Modules in global scope
+- CSS normalization + SCSS Mixins & Maps
 - Contains simple code examples
-- ESLint + Prettier for better code quality
+- [ESLint 8](https://eslint.org/) + [Prettier 2](https://prettier.io/) for better code quality
 - Cypress + Vitest for testing
-- Localiztion examples
-- Light / Dark color modes
-- Custom error page
-- All Google Lighthouse metrics are green ^-^
-  <br/><br/>
+- Localization example
 
 ## Preview
 
 [Live Demo](https://nuxt-content-template.demetrey.ru/)
-<br/><br/>
-![image](/src/public/cover.jpg)
-<br/>
-![image](/src/public/images/lighthouse.png)
-<br/><br/>
+
+![image](/src/public/images/icons/cover.jpg)
+![image](/src/public/images/deco/lighthouse.png)
 
 ## Requirements
 
 - [Node.js](https://nodejs.org/en/): >= 16.17.0
 - [npm](https://www.npmjs.com/): >= 9.2.0
-  <br/><br/>
 
 ## Recommended IDE
 
@@ -52,29 +42,28 @@
 - [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) &rarr; linting and code formatting
 - [Cypress](https://www.cypress.io/) &rarr; End-to-End (e2e) testing framework
 - [Vitest](https://vitest.dev/) &rarr; Unit testing framework
-  <br/><br/>
 
 ## Setup
 
-Install the dependencies
+### Install the dependencies
 
 ```bash
 npm install
 ```
 
-Update packages
+### Update deps if needed
 
 ```bash
 npm run update
 ```
 
-Run AFTER the package is installed
+### Run AFTER the package is installed
 
 ```bash
 npm run postinstall
 ```
 
-## Development
+### Development
 
 Start the development server on http://localhost:3000
 
@@ -82,7 +71,7 @@ Start the development server on http://localhost:3000
 npm run dev
 ```
 
-## Production
+### Production
 
 Build the application for production:
 
@@ -96,7 +85,7 @@ npm run generate
 
 Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment).
 
-## Linting
+### Linting
 
 Run code quality tools
 

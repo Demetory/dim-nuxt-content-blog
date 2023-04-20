@@ -1,10 +1,17 @@
 # humanstxt.org/
 
-/* TEAM */
-Design & Frontend: Demetrey <hello@demetrey.ru>
+/* WHATS THIS ABOUT */
+Vite 4 + Nuxt Content 2 Starter Template
 
-/* SITE */
-Last update: 2023/01/25
-Standards: HTML5, CSS3/SCSS, TypeScript, Script Setup SFC
-Components: Vite, Nuxt3, NuxtContent2, Pinia, ESlint, Prettier, I18n, VueUse
+/* TEAM */
+Demetrey <demetrey.ru>
+
+/* TECHNOLOGIES */
 Software: VSCode
+Standards: HTML5, CSS3/SCSS, JavaScript ES2019, TypeScript 5, Script Setup SFC
+Engines: Node 18, NPM 9
+Components: Vite 4, Nuxt Content 2, Pinia 2, VueUse 10, ESlint 8, Prettier 2
+
+/* PROJECT UPDATES */
+Created: 2023-01-25 18-40
+Last modified: 2023-04-21 00-32

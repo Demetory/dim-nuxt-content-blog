@@ -43,7 +43,7 @@ function useDateToRoman(num: number) {
   ];
 
   while (iterations--) {
-    let digit: string | undefined = digits!.pop();
+    const digit: string | undefined = digits!.pop();
     result = (key[+digit! + iterations * 10] || "") + result;
   }
 

@@ -1,55 +1,116 @@
 <script setup lang="ts">
 // Props
-const props = defineProps<{
-  type?: string;
-}>();
+const props = defineProps({
+  label: String,
+  preset: {
+    type: String,
+    default: "primary",
+    validator(preset: string) {
+      return ["primary", "secondary"].includes(preset);
+    },
+  },
+  size: {
+    type: String,
+    default: "medium",
+    validator(size: string) {
+      return ["small", "medium"].includes(size);
+    },
+  },
+  disabled: Boolean,
+  loading: Boolean,
+});
 
-// Computed Properties
-const getType = computed(() => {
-  return props.type ? `btn-${props.type}` : null;
+// Emitter
+const emit = defineEmits(["click"]);
+
+const onClick = (e: Event) => {
+  emit("click", (e.target as HTMLInputElement).value);
+};
+
+// Computed properties
+const computedClasses = computed(() => {
+  return {
+    "atom-button": true,
+    [`atom-button--${props.preset}`]: true,
+    [`atom-button--${props.size}`]: true,
+    "atom-button--loading": props.loading,
+  };
+});
+
+const computedDisable = computed(() => {
+  return props.loading || props.disabled;
 });
 </script>
 
 <template>
-  <button :class="['btn', getType]">
-    <slot></slot>
+  <button type="button" :class="computedClasses" @click.stop="onClick" :disabled="computedDisable">
+    <AtomSpinner v-if="loading" :preset="preset" :size="size" />
+    {{ label }}
   </button>
 </template>
 
 <style scoped lang="scss">
-.btn {
-  margin: 0.6rem 0;
-  padding: 0.6rem 1.2rem;
+.atom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
   border-radius: grid.$border-radius;
-  border: grid.$border-solid colors.$link-main;
-  transition: color grid.$transition, background-color grid.$transition, opacity grid.$transition;
-  opacity: 1;
+  transition: all grid.$transition;
+  cursor: pointer;
+  outline: 0;
+  user-select: none;
 
-  &:not(:last-child) {
-    margin-right: 1rem;
-  }
-}
-
-.mode-dark .btn {
-  color: colors.$font-black;
-  background-color: colors.$link-main;
-
-  &:hover,
-  &:active,
-  &:focus {
-    opacity: 0.75;
-  }
-}
-
-.mode-light .btn {
-  color: colors.$font-black;
-  background-color: transparent;
-
-  &:hover,
-  &:active,
-  &:focus {
+  &--primary:not(:disabled) {
     color: colors.$white;
     background-color: colors.$link-main;
+
+    &:hover {
+      background-color: colors.$link-main-hover;
+    }
+    &:active {
+      background-color: colors.$link-main-active;
+    }
+  }
+
+  &--medium {
+    @include font(1.4rem, 1.4rem, 400);
+    padding: 12px 14px;
+  }
+
+  &--small {
+    @include font(1.4rem, 1.4rem, 400);
+    padding: 9px 12px;
+  }
+
+  &--loading {
+    cursor: default;
+  }
+
+  &--medium.atom-button--loading {
+    padding: 10px 14px;
+  }
+  &--small.atom-button--loading {
+    padding: 8px 12px;
+  }
+
+  &:disabled {
+    color: colors.$white;
+    background-color: colors.$grey;
+    cursor: default;
+  }
+
+  .atom-icon,
+  .atom-spinner {
+    margin-right: 8px;
+  }
+}
+
+.theme-dark {
+  .atom-button {
+    &--primary:not(:disabled) {
+      color: colors.$black;
+    }
   }
 }
 </style>

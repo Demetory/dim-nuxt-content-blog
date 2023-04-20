@@ -1,24 +1,35 @@
 <script setup lang="ts">
 // Modules
-import { useExamplePiniaStore } from "@/store/examplePinia";
-
-// Data
-const examplePiniaStore = useExamplePiniaStore();
+import { navi } from "@/assets/data/navi";
 </script>
 
 <template>
   <nav>
-    <NuxtLink v-for="(link, index) in examplePiniaStore.navi" :key="`navi-${index}`" :to="link.path">
-      {{ $t(`${link.translate}`) }}
-    </NuxtLink>
+    <p>
+      <NuxtLink v-for="(link, index) in navi" :to="link.path" :key="`navi-${index}`">
+        {{ $t(`${link.translate}`) }}
+      </NuxtLink>
+    </p>
+    <p>Last update: 2023-04-21</p>
   </nav>
 </template>
 
 <style scoped lang="scss">
 nav {
   display: flex;
-  flex-direction: row;
-  margin: 1.5rem 0 1rem;
+  flex-direction: column;
+
+  p {
+    text-align: center;
+
+    &:first-of-type {
+      margin-bottom: grid.$gap;
+    }
+
+    &:last-of-type {
+      font-size: 1.3rem;
+    }
+  }
 
   a:not(:last-child) {
     margin-right: grid.$gap;

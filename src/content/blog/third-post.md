@@ -1,7 +1,7 @@
 ---
 title: "Third Post"
 description: "This is the third article"
-img: "images/cover-(3).png"
+img: "images/deco/cover-(3).png"
 tags: [Nuxt, Test, Third]
 ---
 

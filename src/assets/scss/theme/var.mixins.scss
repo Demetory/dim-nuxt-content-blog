@@ -1,0 +1,12 @@
+/* ==========================================================================
+   MIXINS
+
+   Imported through ./vite.config.ts
+   Usage: @include MIXIN_NAME | @include MIXIN_NAME($var)
+   ========================================================================== */
+
+@mixin font($size, $height, $weight) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}

@@ -1,0 +1,14 @@
+<svg id="switch-dark" data-name="switch-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 59.99">
+  <defs>
+    <style>.cls-1{fill:#efefef;}</style>
+  </defs>
+  <path class="cls-1" d="M30,11.58A18.64,18.64,0,1,0,48.64,30.21,18.66,18.66,0,0,0,30,11.58Zm0,32.26A13.64,13.64,0,1,1,43.64,30.2,13.66,13.66,0,0,1,30,43.84Z" transform="translate(0 -0.01)"/>
+  <path class="cls-1" d="M30,7.82a2.5,2.5,0,0,0,2.5-2.5V2.5a2.5,2.5,0,0,0-5,0V5.32A2.5,2.5,0,0,0,30,7.82Z" transform="translate(0 -0.01)"/>
+  <path class="cls-1" d="M30,52.19a2.5,2.5,0,0,0-2.5,2.5V57.5a2.5,2.5,0,0,0,5,0V54.69A2.51,2.51,0,0,0,30,52.19Z" transform="translate(0 -0.01)"/>
+  <path class="cls-1" d="M57.5,27.51H54.69a2.5,2.5,0,1,0,0,5H57.5a2.5,2.5,0,1,0,0-5Z" transform="translate(0 -0.01)"/>
+  <path class="cls-1" d="M5.31,27.51H2.5a2.5,2.5,0,1,0,0,5H5.3a2.5,2.5,0,0,0,0-5Z" transform="translate(0 -0.01)"/>
+  <path class="cls-1" d="M47.68,8.8l-2,2a2.5,2.5,0,0,0,3.53,3.54l2-2A2.5,2.5,0,0,0,47.68,8.8Z" transform="translate(0 -0.01)"/>
+  <path class="cls-1" d="M10.78,45.69l-2,2a2.5,2.5,0,1,0,3.54,3.53l2-2a2.5,2.5,0,1,0-3.53-3.54Z" transform="translate(0 -0.01)"/>
+  <path class="cls-1" d="M49.22,45.69a2.5,2.5,0,1,0-3.53,3.54l2,2a2.5,2.5,0,0,0,3.54-3.53Z" transform="translate(0 -0.01)"/>
+  <path class="cls-1" d="M10.78,14.32a2.5,2.5,0,0,0,3.53-3.54l-2-2a2.5,2.5,0,0,0-3.54,3.54Z" transform="translate(0 -0.01)"/>
+</svg>

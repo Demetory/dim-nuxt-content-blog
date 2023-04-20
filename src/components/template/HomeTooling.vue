@@ -7,21 +7,22 @@ const examplePiniaStore = useExamplePiniaStore();
 </script>
 
 <template>
-  <AtomSlot>
+  <TemplateSlot>
     <template #icon>
-      <IconTooling class="icon" />
+      <AtomIcon name="tooling" />
     </template>
-    <template #heading> Tooling </template>
+    <template #heading>Tooling</template>
     <template #content>
       <ul>
         <li>
-          Recommended IDE: <AtomLink :params="examplePiniaStore.links.vscode" /> +
-          <AtomLink :params="examplePiniaStore.links.volar" /> +
-          <AtomLink :params="examplePiniaStore.links.devtools" />
+          Recommended IDE setup:
+          <AtomLink :link="examplePiniaStore.getLink('link-ide')" /> +
+          <AtomLink :link="examplePiniaStore.getLink('link-volar')" /> +
+          <AtomLink :link="examplePiniaStore.getLink('link-devtools')" />
         </li>
-        <li>End-to-End testing framework: <AtomLink :params="examplePiniaStore.links.cypress" /></li>
-        <li>Unit testing framework: <AtomLink :params="examplePiniaStore.links.vitest" /></li>
+        <li>End-to-End testing framework: <AtomLink :link="examplePiniaStore.getLink('link-e2e')" /></li>
+        <li>Unit testing framework: <AtomLink :link="examplePiniaStore.getLink('link-unit')" /></li>
       </ul>
     </template>
-  </AtomSlot>
+  </TemplateSlot>
 </template>

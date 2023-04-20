@@ -1,8 +1,7 @@
 /* ==========================================================================
-   STYLE: Helpers
+   STYLES: Helpers
 
-   CSS Helpers.
-   Edit carefully.
+   Helpers Collection
    ========================================================================== */
 
 // Hide visually and from screen readers
@@ -66,4 +65,22 @@ a:not([class]) {
   height: 1px;
   border: 0;
   border-top: 1px solid colors.$grey;
+}
+
+// Selection Highlight
+::selection {
+  background-color: colors.$bg-selection;
+  color: colors.$font-selection;
+  text-shadow: none;
+}
+
+// Fade + Blur Transition
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }

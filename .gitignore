@@ -3,6 +3,7 @@
 .nitro
 .cache
 .env
+.yarn
 nuxt.d.ts
 
 # Logs
@@ -22,9 +23,14 @@ dist-ssr
 coverage
 *.local
 
+# Test
+/cypress/videos/
+/cypress/screenshots/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
 *.suo
 *.ntvs*

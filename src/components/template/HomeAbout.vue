@@ -7,25 +7,24 @@ const examplePiniaStore = useExamplePiniaStore();
 </script>
 
 <template>
-  <AtomSlot>
+  <TemplateSlot>
     <template #icon>
-      <IconDocumentation class="icon" />
+      <AtomIcon name="documentation" />
     </template>
-    <template #heading> What`s this about </template>
+    <template #heading>Nuxt Content 2 + Vite 4 Starter Template</template>
     <template #content>
-      <ul>
-        <li>
-          Based on <AtomLink :params="examplePiniaStore.links.nuxt" /> framework with
-          <AtomLink :params="examplePiniaStore.links.nuxtcontent" /> module.
-        </li>
-        <li>Uses <AtomLink :params="examplePiniaStore.links.vite" /> as project build tool.</li>
-        <li>
-          Built on <AtomLink :params="examplePiniaStore.links.nuxttemplate" /> with full
-          <AtomLink :params="examplePiniaStore.links.typescript" /> support, used
-          <AtomLink :params="examplePiniaStore.links.atomic" /> and
-          <AtomLink :params="examplePiniaStore.links.sfc" />
-        </li>
-      </ul>
+      <p>
+        This project is served and bundled with <AtomLink :link="examplePiniaStore.getLink('link-vite')" />, uses
+        <AtomLink :link="examplePiniaStore.getLink('link-ts')" /> for strong typing and
+        <AtomLink :link="examplePiniaStore.getLink('link-sfc')" />. Designed with
+        <AtomLink :link="examplePiniaStore.getLink('link-pattern')" />.
+      </p>
+      <p>
+        Official documentation of <AtomLink :link="examplePiniaStore.getLink('link-vue')" />,
+        <AtomLink :link="examplePiniaStore.getLink('link-nuxt')" /> and
+        <AtomLink :link="examplePiniaStore.getLink('link-nuxtcontent')" /> provides you with all information you need to
+        get started.
+      </p>
     </template>
-  </AtomSlot>
+  </TemplateSlot>
 </template>

@@ -1,7 +1,7 @@
 /* ==========================================================================
-   VARIABLES: Grid System / Dimensions
+   VARIABLES: Grid System / Dimensions / Heplers
 
-   Imported through vite.config.ts as @use directive
+   Imported through ./vite.config.ts as @use directive
    Usage: grid.$var
    ========================================================================== */
 
@@ -17,9 +17,7 @@ $border-app: 20px;
 
 // Z-Indexes
 $zindex-top: 90000;
-$zindex-kreuz: 21000;
 $zindex-border-app: 20000;
-$zindex-navi: 10000;
 
 // Transitions
-$transition: 0.5s ease;
+$transition: 0.3s ease-in-out;

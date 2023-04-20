@@ -1,0 +1,166 @@
+/* ==========================================================================
+   STYLES: Main App Theme
+
+   Imported through ./src/main.ts as global scope
+   Feel free to customize your app ^-^
+   ========================================================================== */
+
+// Core
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+html.theme-light {
+  color: colors.$font-main;
+  background-color: colors.$bg-main;
+}
+
+html.theme-dark {
+  color: colors.$grey;
+  background-color: colors.$font-main;
+}
+
+// App border around
+html,
+body {
+  &::before,
+  &::after {
+    content: " ";
+    backface-visibility: hidden;
+    position: fixed;
+    z-index: grid.$zindex-border-app;
+    transition: background-color grid.$transition;
+  }
+}
+
+html {
+  &:after,
+  &:before {
+    top: 0;
+    height: 100%;
+    width: grid.$border-app;
+
+    @media screen and (max-width: 800px) {
+      width: calc(grid.$border-app / 2);
+    }
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+body {
+  padding: grid.$border-app;
+
+  &::after,
+  &::before {
+    left: 0;
+    width: 100%;
+    height: grid.$border-app;
+
+    @media screen and (max-width: 800px) {
+      height: calc(grid.$border-app / 2);
+    }
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: calc(grid.$border-app / 2);
+  }
+}
+
+html.theme-light {
+  &::after,
+  &::before {
+    background-color: colors.$bg-border-app;
+  }
+
+  body {
+    &::after,
+    &::before {
+      background-color: colors.$bg-border-app;
+    }
+  }
+}
+
+html.theme-dark {
+  &::after,
+  &::before {
+    background-color: colors.$black;
+  }
+
+  body {
+    &::after,
+    &::before {
+      background-color: colors.$black;
+    }
+  }
+}
+
+// Containers
+#app {
+  flex-direction: row;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding: grid.$gap;
+}
+
+// Typo
+h1 {
+  @include font(3rem, 3rem, 700);
+}
+
+h2 {
+  @include font(2.4rem, 2.4rem, 700);
+}
+
+.error {
+  color: colors.$red;
+}
+
+// Links
+.theme-dark a {
+  &:active,
+  &.router-link-exact-active {
+    color: colors.$grey;
+  }
+}
+
+a {
+  color: colors.$link-main;
+  transition: color grid.$transition;
+  text-decoration: none;
+
+  &:hover {
+    color: colors.$link-main-hover;
+  }
+
+  &:active,
+  &.router-link-exact-active {
+    color: colors.$link-main-active;
+    cursor: default;
+    text-decoration: none;
+  }
+}

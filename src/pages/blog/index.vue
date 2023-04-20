@@ -5,7 +5,7 @@ definePageMeta({
 });
 
 useHead({
-  meta: [{ name: "description", content: "NuxtContent Starter Template" }],
+  meta: [{ name: "description", content: "Nuxt Content Starter Template" }],
 });
 </script>
 

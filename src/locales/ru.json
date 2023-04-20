@@ -1,8 +1,10 @@
 {
   "common": {
-    "siteTitle": "NuxtContent Blog Starter Template",
+    "siteTitle": "Nuxt Starter Template",
     "siteNavi": {
       "home": "Главная",
+      "login": "Логин",
+      "secret": "Секрет",
       "example": "Примеры",
       "blog": "Блог",
       "error": "404"
@@ -12,7 +14,7 @@
         "title": "Язык"
       },
       "mode": {
-        "title": "Режим",
+        "title": "сменить на",
         "body": {
           "dark": "Тёмный",
           "light": "Светлый"
@@ -28,7 +30,16 @@
         "code": "Код ошибки",
         "message": "Сообщение",
         "back": "На главную"
-      }
+      },
+      "404": "Страница не найдена"
+    },
+    "login": {
+      "title": "Логин",
+      "body": "Я страница входа"
+    },
+    "secret": {
+      "title": "Секретная страница",
+      "body": "Я очень секретная страница"
     }
   }
 }

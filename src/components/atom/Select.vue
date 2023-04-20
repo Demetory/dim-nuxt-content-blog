@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // Modules
 import { useI18n } from "vue-i18n";
-
 // Types
 import type ISelect from "@/types/ISelect";
 
@@ -69,7 +68,7 @@ const updateValue = (e: Event) => {
     transition: background-color grid.$transition;
   }
 }
-.mode-dark {
+.theme-dark {
   .select {
     &__itself {
       color: colors.$font-black;
@@ -83,7 +82,7 @@ const updateValue = (e: Event) => {
   }
 }
 
-.mode-light {
+.theme-light {
   .select {
     &__itself {
       color: colors.$font-black;

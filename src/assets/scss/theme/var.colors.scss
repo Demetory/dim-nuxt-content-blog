@@ -1,7 +1,7 @@
 /* ==========================================================================
    VARIABLES: Color Library
 
-   Imported through vite.config.ts as @use directive
+   Imported through ./vite.config.ts as @use directive
    Usage: colors.$var
    ========================================================================== */
 
@@ -9,31 +9,30 @@
 $white: #fff;
 $black: #000;
 $grey: #999;
+$red: #eb5757;
 
 // Typo Colors
-$font-main-light: #121212;
-$font-main-dark: #fff;
+$font-main: #121212;
 $font-black: #121212;
-$font-selection: #fff;
+$font-selection: $white;
 $font-grey: #dbdbdb;
-$font-white: #efefef;
 
 // Links
-$link-main: #00bd6f;
-$link-main-hover: #3f3f46;
+$link-main: #41b883;
+$link-main-hover: #34495e;
 $link-main-active: #000;
+
+// Backgrounds
+$bg-main: $white;
+$bg-border-app: #efefef;
+$bg-selection: #73bbc5;
+
+// Helpers
+$selection-bg: #b3d4fc;
+
+// FROM BACK
 
 // Input
 $input-bg-dark: rgba(0, 189, 111, 0.75);
 $input-bg-dark-hover: rgba(0, 189, 111, 0.5);
-
-// Backgrounds
-$bg-body-light: #fff;
-$bg-body-dark: #121212;
-$bg-border-app: #efefef;
-$bg-selection: #73bbc5;
-$bg-border-app-light: #efefef;
-$bg-border-app-dark: #000;
-
-// Helpers
-$selection-bg: #b3d4fc;
+$font-white: #efefef;

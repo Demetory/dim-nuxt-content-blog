@@ -1,34 +1,39 @@
 /* ==========================================================================
-   STYLES: Default definitions
+   STYLES: Core
 
-   Common default definitions.
-   Edit carefully.
+   Main containers and global rules
    ========================================================================== */
 
 // Core
-html {
-  display: flex;
-  flex: 1;
+:root {
   font-size: 62.5%;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  color: colors.$font-main;
+  background-color: colors.$bg-main;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  transition: color grid.$transition, background-color grid.$transition;
 }
 
 body {
   position: relative;
   display: flex;
-  flex: 1;
   min-width: grid.$min-width;
   min-height: grid.$min-height;
-  font-style: normal;
   font-size: 1.6rem;
-  line-height: 1;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: all grid.$transition;
 }
 
-#__nuxt {
+#app {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -43,47 +48,6 @@ main {
   flex: 1;
 }
 
-// Links
-a {
-  transition: color grid.$transition, opacity grid.$transition;
-  text-decoration: none;
-  outline: 0;
-
-  &:active,
-  &.router-link-exact-active,
-  &:disabled {
-    cursor: default;
-  }
-}
-
-// Forms
-button,
-input,
-select {
-  outline: 0;
-}
-
-button:not(:disabled),
-input:not(:disabled),
-select:not(:disabled) {
-  cursor: pointer;
-}
-
-// Selection Highlight
-::selection {
-  background-color: colors.$bg-selection;
-  color: colors.$font-selection;
-  text-shadow: none;
-}
-
-// Fade + Blur Transition
-.page-enter-active,
-.page-leave-active {
-  transition: all grid.$transition;
-}
-
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  filter: blur(1rem);
+.nuxt-loading-indicator {
+  z-index: 999999999999999999999999 !important;
 }

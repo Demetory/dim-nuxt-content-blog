@@ -1,14 +1,15 @@
 {
-  "name": "Dim-NuxtContent-Template",
-  "short_name": "Dim-NuxtContent",
-  "description": "Dim Nuxt 3 + NuxtContent 2 Starter Template",
+  "name": "Dim Nuxt Content 2 Startet Template",
+  "short_name": "Dim-NuxtContent2-Template",
+  "description": "Nuxt Content 2 + Vite 4 Starter Template",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "images/icons/icon.png",
       "type": "image/png",
       "sizes": "192x192"
     }
   ],
+  "id": "/?",
   "start_url": "/?utm_source=homescreen",
   "background_color": "#fafafa",
   "theme_color": "#fafafa",

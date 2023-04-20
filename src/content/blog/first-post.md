@@ -1,7 +1,7 @@
 ---
 title: "First Post"
 description: "This is the first article"
-img: "images/cover-(1).png"
+img: "images/deco/cover-(1).png"
 tags: [Nuxt, Test, First]
 ---
 
