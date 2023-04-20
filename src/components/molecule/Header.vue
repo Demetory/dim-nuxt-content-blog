@@ -17,11 +17,13 @@
 
 <style scoped lang="scss">
 header {
-  position: relative;
+  top: grid.$gap;
+  position: sticky;
   display: flex;
   flex-direction: column;
   flex: 0 1 33%;
   padding: grid.$gap;
+  max-height: calc(100vh - (grid.$gap * 2 + 8px));
 
   .head-logo {
     display: flex;
