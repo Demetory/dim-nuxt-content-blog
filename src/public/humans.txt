@@ -14,4 +14,4 @@ Components: Vite 4, Nuxt Content 2, Pinia 2, VueUse 10, ESlint 8, Prettier 2
 
 /* PROJECT UPDATES */
 Created: 2023-01-25 18-40
-Last modified: 2023-04-21 00-32
+Last modified: 2023-06-21 15-48
